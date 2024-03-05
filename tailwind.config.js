@@ -3,7 +3,17 @@ export default {
     darkMode: "selector",
     theme: {
         extend: {
-            colors: { cred: "#FF1654", cblue: "#118AD3", cgreen: "#00BA9F" },
+            colors: {
+                grad1: "#00b5a0",
+                grad2: "#00c69b",
+                cred: "#FF1654",
+                cblue: "#118AD3",
+                cgreen: "#00BA9F",
+            },
+            fontFamily: {
+                iranYekan: ["iranYekan", "sans-serif"],
+                iranSans: ["iranSans", "sans-serif"],
+            },
         },
     },
     plugins: [],
