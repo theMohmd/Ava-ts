@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.NavBg {
+  background: linear-gradient(144deg, #00b5a0 20%, #00c69b 100%),
+    url("./assets/Alefba.svg");
+}
