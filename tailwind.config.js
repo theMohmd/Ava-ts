@@ -9,6 +9,7 @@ export default {
                 cred: "#FF1654",
                 cblue: "#118AD3",
                 cgreen: "#00BA9F",
+                cActiveGreen: "#02816E",
             },
             fontFamily: {
                 iranYekan: ["iranYekan", "sans-serif"],

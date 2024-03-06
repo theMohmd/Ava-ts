@@ -6,18 +6,12 @@ const { theme } = resolveConfig(tailwindConfig);
 const PhoneNav = () => {
     return (
         <div
-            className="
-            h-full
-            grid grid-cols-3
-            rounded-[0_0_1rem_1rem]
-            text-black
-            "
+            className="grid grid-cols-3 h-full text-black rounded-[0_0_1rem_1rem]"
             style={{
                 background: `
                 url('src/assets/Alefba.svg') ,
                 linear-gradient(${theme.colors.grad1}, ${theme.colors.grad2})
                 `,
-
                 backgroundSize: "25% auto",
             }}
         >
