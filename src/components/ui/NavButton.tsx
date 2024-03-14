@@ -1,8 +1,5 @@
 import { NavLink } from "react-router-dom";
 import { ReactNode } from "react";
-import resolveConfig from "tailwindcss/resolveConfig";
-import tailwindConfig from "../../../tailwind.config.js";
-const { theme } = resolveConfig(tailwindConfig);
 type NavButtonProp = {
     children: ReactNode;
     to: string;
@@ -13,10 +10,10 @@ const NavButton = (props: NavButtonProp) => {
             to={props.to}
             style={({ isActive }) => {
                 return {
-                    backgroundColor: isActive ? theme.colors.cActiveGreen : "",
+                    backgroundColor: isActive ? "rgba(0,0,0,0.5)" : "",
                 };
             }}
-            className="flex justify-between hover:bg-cActiveGreen  items-center py-2 px-4 font-bold text-center text-white rounded-[10px]"
+            className="flex justify-between items-center py-2 px-4 font-bold text-center text-sm text-white rounded-[10px] bg-cActiveGreen brightness-125"
         >
             {props.children}
         </NavLink>

@@ -1,31 +1,24 @@
 import Logo from "./ui/Logo";
 import NavButton from "./ui/NavButton";
-import { ArchiveIcon, SpeechIcon } from "./ui/Icons.js";
-import resolveConfig from "tailwindcss/resolveConfig";
-import tailwindConfig from "../../tailwind.config.js";
-const { theme } = resolveConfig(tailwindConfig);
+import { ArchiveIcon, LoginIcon, SpeechIcon } from "./ui/Icons.js";
 const DesktopNav = () => {
     return (
-        <div
-            className="p-5 h-full rounded-[1rem_0_0_1rem]"
-            style={{
-                background: `
-                url('src/assets/Alefba.svg') ,
-                linear-gradient(${theme.colors.grad1}, ${theme.colors.grad2})
-                `,
-                backgroundSize: " 120% auto",
-                backgroundPosition: "right",
-            }}
-        >
+        <div className="py-5 px-2 h-full navBg rounded-[1rem_0_0_1rem]">
             <Logo />
-            <div className="mt-10">
-                <NavButton to="/Ava/speech">
-                    <p>تبدیل گفتار</p>
+            <div className="flex flex-col gap-2 mt-10">
+                <NavButton to="/Ava/login">
+                    <div className="relative right-1">
+                        <LoginIcon />
+                    </div>
+                    <p>ورود | ثبت‌نام</p>
+                </NavButton>
+                <NavButton to="/Ava/transcribe">
                     <SpeechIcon />
+                    <p>تبدیل گفتار</p>
                 </NavButton>
                 <NavButton to="/Ava/archive">
-                    <p>آرشیو</p>
                     <ArchiveIcon />
+                    <p>آرشیو</p>
                 </NavButton>
             </div>
         </div>

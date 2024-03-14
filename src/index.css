@@ -2,12 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @font-face {
-  font-family: "iranYekan";
-  src: url("assets/iranYekan.ttf");
+    font-family: "iranYekan";
+    src: url("assets/iranYekan.ttf");
 }
 @font-face {
-  font-family: "iranSans";
-  src: url("assets/iranSans.ttf");
+    font-family: "iranSans";
+    src: url("assets/iranSans.ttf");
+}
+.navBg {
+    background: Url("src/assets/Alefba.svg"),
+        linear-gradient(theme(colors.grad1), theme(colors.grad2));
+    backgroundsize: "25% auto";
 }
