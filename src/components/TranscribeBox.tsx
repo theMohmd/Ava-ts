@@ -5,39 +5,36 @@ import TranscribeBoxUpload from "./TranscribeBoxUpload";
 import TranscribeBoxLink from "./TranscribeBoxLink";
 import LangSelect from "./ui/LangSelect";
 
-type modeType = "link" | "upload" | "record";
+export type modeType = "link" | "upload" | "record";
 const TranscribeBox = () => {
-    const [mode, setmode] = useState<modeType>("link");
+    const [mode, setmode] = useState<modeType>("upload");
     return (
-        <div className="flex flex-col h-[50dvh]">
-            <div className="flex">
+        <div className="flex flex-col w-full h-[50dvh]">
+            <div className="flex gap-2 justify-start items-center">
+                <div className="mr-auto ml-4">
+                    <LangSelect />
+                </div>
                 <TranscribeBoxButton
-                    onClick={() => {
-                        setmode("record");
-                    }}
-                    active={mode == "record"}
-                >
-                    record
-                </TranscribeBoxButton>
+                    onClick={setmode}
+                    type="link"
+                    mode={mode}
+                />
                 <TranscribeBoxButton
-                    onClick={() => {
-                        setmode("upload");
-                    }}
-                    active={mode == "upload"}
-                >
-                    upload
-                </TranscribeBoxButton>
+                    onClick={setmode}
+                    type="upload"
+                    mode={mode}
+                />
                 <TranscribeBoxButton
-                    onClick={() => {
-                        setmode("link");
-                    }}
-                    active={mode == "link"}
-                >
-                    link
-                </TranscribeBoxButton>
-                <LangSelect />
+                    onClick={setmode}
+                    type="record"
+                    mode={mode}
+                />
             </div>
-            <div className="rounded-xl border border-cgreen grow">
+            <div
+                className={`grid p-5 rounded-xl border border-cgreen ${
+                    mode === "record" ? "rounded-tr-none" : null
+                }  grow`}
+            >
                 {mode === "record" ? (
                     <TranscribeBoxRecord />
                 ) : mode === "upload" ? (

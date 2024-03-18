@@ -7,18 +7,18 @@ const DesktopNav = () => {
             <Logo />
             <div className="flex flex-col gap-2 mt-10">
                 <NavButton to="/Ava/login">
-                    <div className="relative right-1">
+                    <p>ورود | ثبت‌نام</p>
+                    <div className="relative left-1">
                         <LoginIcon />
                     </div>
-                    <p>ورود | ثبت‌نام</p>
                 </NavButton>
                 <NavButton to="/Ava/transcribe">
-                    <SpeechIcon />
                     <p>تبدیل گفتار</p>
+                    <SpeechIcon />
                 </NavButton>
                 <NavButton to="/Ava/archive">
-                    <ArchiveIcon />
                     <p>آرشیو</p>
+                    <ArchiveIcon />
                 </NavButton>
             </div>
         </div>

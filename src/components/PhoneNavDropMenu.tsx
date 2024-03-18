@@ -1,14 +1,14 @@
 import { motion } from "framer-motion";
-import { ArchiveIcon, LoginIcon, SpeechIcon } from "./Icons";
-import NavButton from "./NavButton";
+import { ArchiveIcon, LoginIcon, SpeechIcon } from "./ui/Icons";
+import NavButton from "./ui/NavButton";
 interface PhoneNavDropMenuProps {
     onClick: () => void;
 }
-const PhoneNavDropMenu = (props: PhoneNavDropMenuProps) => {
+const PhoneNavDropMenu = ({onClick}: PhoneNavDropMenuProps) => {
     return (
         <motion.div
             className="flex absolute top-0 z-10 flex-col gap-2 p-2 pt-14 w-screen bg-cgreen rounded-[0_0_1rem_1rem]"
-            onClick={props.onClick}
+            onClick={onClick}
             initial={{ opacity: 0, y: -100 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 100 }}

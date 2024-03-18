@@ -1,9 +1,9 @@
 import Logo from "./ui/Logo";
-import { HamburgerIcon } from "./ui/Icons.js";
 import { useState } from "react";
-import PhoneNavDropMenu from "./ui/PhoneNavDropMenu.js";
+import PhoneNavDropMenu from "./PhoneNavDropMenu.js";
+import HamburgerIcon from "./ui/HamburgerIcon.js";
 const PhoneNav = () => {
-    const [menu, setmenu] = useState(false);
+    const [menu, setmenu] = useState<boolean>(false);
     const handleClick = () => {
         setmenu((current) => !current);
     };
