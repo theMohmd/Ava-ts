@@ -1,6 +1,7 @@
 //link component ui
 import { useState } from "react";
-import { ChainIcon, ClipboardIcon } from "../../ui/Icons";
+import { ChainIcon } from "../../ui/Icons";
+import PasteButton from "../../ui/PasteButton";
 const TranscribeBoxLinkUi = ({
     onClick,
 }: {
@@ -17,14 +18,13 @@ const TranscribeBoxLinkUi = ({
                     <ChainIcon />
                 </button>
                 <input
+                    value={input}
                     type="text"
                     placeholder="example.com/sample.mp3"
                     className="  text-gray-500 outline-none grow w-1/2"
                     onChange={(e) => setinput(e.target.value)}
                 />
-                <button title="جایگذاری" className="mr-1 text-gray-400">
-                    <ClipboardIcon />
-                </button>
+                <PasteButton onClick={setinput} />
             </div>
             <p dir="rtl" className="mt-5 text-sm text-gray-400">
                 نشانی اینترنتی فایل حاوی (صوتی / تصویری) را وارد و دکمه را فشار
