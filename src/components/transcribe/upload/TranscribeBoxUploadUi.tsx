@@ -1,6 +1,7 @@
 //ui of upload component for transcribe
 
-import { UploadIcon } from "./ui/Icons";
+import { UploadIcon } from "../../ui/Icons";
+
 const TranscribeBoxUploadUi = () => {
     return (
         <div className="flex relative flex-col justify-center items-center p-2 rounded-xl border-2 border-dashed border-cgreen">

@@ -1,5 +1,5 @@
 //link component ui
-import { ChainIcon, ClipboardIcon } from "./ui/Icons";
+import { ChainIcon, ClipboardIcon } from "../../ui/Icons"
 const TranscribeBoxLinkUi = () => {
   return (
         <div className="flex flex-col items-center justify-center h-full">

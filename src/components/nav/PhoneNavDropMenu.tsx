@@ -1,7 +1,7 @@
 //drop menu of phone nav bar
 import { motion } from "framer-motion";
-import { ArchiveIcon, LoginIcon, SpeechIcon } from "./ui/Icons";
-import NavButton from "./ui/NavButton";
+import { ArchiveIcon, LoginIcon, SpeechIcon } from "../ui/Icons";
+import NavButton from "../ui/NavButton";
 interface PhoneNavDropMenuProps {
     onClick: () => void;
 }

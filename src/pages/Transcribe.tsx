@@ -1,5 +1,5 @@
 //layout of transcribe page
-import TranscribeBox from "../components/TranscribeBox";
+import TranscribeBox from "../components/transcribe/TranscribeBox";
 
 const Transcribe = () => {
     return (

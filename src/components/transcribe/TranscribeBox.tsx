@@ -1,14 +1,14 @@
 //layout of transcribe component
 import { useState } from "react";
-import TranscribeBoxButton from "./ui/TranscribeBoxButton";
-import TranscribeBoxRecord from "./TranscribeBoxRecord";
-import TranscribeBoxUpload from "./TranscribeBoxUpload";
-import TranscribeBoxLink from "./TranscribeBoxLink";
-import LangSelect from "./ui/LangSelect";
+import TranscribeBoxButton from "../ui/TranscribeBoxButton";
+import TranscribeBoxRecord from "./record/TranscribeBoxRecord";
+import TranscribeBoxUpload from "./upload/TranscribeBoxUpload";
+import TranscribeBoxLink from "./link/TranscribeBoxLink";
+import LangSelect from "../ui/LangSelect";
 
 export type modeType = "link" | "upload" | "record";
 const TranscribeBox = () => {
-    const [mode, setmode] = useState<modeType>("upload");
+    const [mode, setmode] = useState<modeType>("link");
     return (
         <div className="flex flex-col w-full h-[50dvh]">
             <div className="flex gap-2 justify-start items-center">

@@ -1,4 +1,4 @@
-import { MicIcon } from "./ui/Icons";
+import { MicIcon } from "../../ui/Icons";
 
 const TranscribeBoxRecord = () => {
     return (

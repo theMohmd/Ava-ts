@@ -1,8 +1,8 @@
 //navigation bar for phone
-import Logo from "./ui/Logo";
+import Logo from "../ui/Logo";
 import { useState } from "react";
 import PhoneNavDropMenu from "./PhoneNavDropMenu.js";
-import HamburgerIcon from "./ui/HamburgerIcon.js";
+import { HamburgerIcon } from "../ui/Icons.js";
 const PhoneNav = () => {
     const [menu, setmenu] = useState<boolean>(false);
     const handleClick = () => {
