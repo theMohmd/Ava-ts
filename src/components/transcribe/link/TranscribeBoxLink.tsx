@@ -1,15 +1,16 @@
 //manage data and ui of linx component
 import TranscribeBoxLinkUi from "./TranscribeBoxLinkUi";
-import { useState } from "react";
 import Loading from "../../ui/Loading";
+import { useState } from "react";
+import { useQueryLink } from "./useQueryLink";
 
-import { useQueryLink } from "../../../api/useQueryLink";
 const TranscribeBoxLink = () => {
-    const [enableQuery ] = useState(false);
-    const { data, isLoading } = useQueryLink(enableQuery);
-    if (!data) return <TranscribeBoxLinkUi />;
+    const [input, setinput] = useState<string>("");
+    const { data, isLoading } = useQueryLink(input, "fa");
+
+    if (data) return <div> data </div>;
     if (isLoading) return <Loading />;
-    return <div> data </div>;
+    return <TranscribeBoxLinkUi onClick={setinput} />;
 };
 
 export default TranscribeBoxLink;
