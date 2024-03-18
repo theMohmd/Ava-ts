@@ -1,3 +1,4 @@
+//navigation bar for phone
 import Logo from "./ui/Logo";
 import { useState } from "react";
 import PhoneNavDropMenu from "./PhoneNavDropMenu.js";

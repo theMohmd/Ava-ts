@@ -1,3 +1,4 @@
+//logo
 import { LogoIcon } from "./Icons";
 
 const Logo = () => {

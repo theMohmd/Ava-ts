@@ -1,3 +1,4 @@
+//all icons needed for website
 export const Icon = () => {
     return <div>Icon</div>;
 };

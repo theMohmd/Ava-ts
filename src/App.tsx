@@ -1,3 +1,4 @@
+//general layout of website
 import PhoneNav from "./components/PhoneNav";
 import DesktopNav from "./components/DesktopNav";
 import { Route, Routes } from "react-router-dom";

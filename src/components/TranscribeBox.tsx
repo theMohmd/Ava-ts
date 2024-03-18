@@ -1,3 +1,4 @@
+//layout of transcribe component
 import { useState } from "react";
 import TranscribeBoxButton from "./ui/TranscribeBoxButton";
 import TranscribeBoxRecord from "./TranscribeBoxRecord";

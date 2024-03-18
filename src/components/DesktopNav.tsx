@@ -1,3 +1,4 @@
+//navigation bar for Desktop
 import Logo from "./ui/Logo";
 import NavButton from "./ui/NavButton";
 import { ArchiveIcon, LoginIcon, SpeechIcon } from "./ui/Icons.js";

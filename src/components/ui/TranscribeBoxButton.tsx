@@ -1,3 +1,4 @@
+//menu buttons for transcribe component
 import { ChainIcon, MicIcon, UploadIcon } from "./Icons";
 import { modeType } from "../TranscribeBox";
 type TranscribeBoxButtonProps = {

@@ -1,4 +1,4 @@
-
+//hamburger / X icon for navigation with animation
 import  { useState } from 'react';
 import { motion } from 'framer-motion';
 

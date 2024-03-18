@@ -1,3 +1,4 @@
+//component for selecting transcription language
 import { useState } from "react";
 
 type langType = "en" | "fa";
