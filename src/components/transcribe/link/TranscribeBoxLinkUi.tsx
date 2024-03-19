@@ -9,11 +9,11 @@ const TranscribeBoxLinkUi = ({
 }) => {
     const [input, setinput] = useState<string>("");
     return (
-        <div className="flex flex-col items-center justify-center h-full">
-            <div className="flex p-1 rounded-full border border-cgreen gap-1 ">
+        <div className="flex flex-col justify-center items-center h-full">
+            <div className="flex gap-1 p-1 rounded-full border border-cgreen">
                 <button
                     onClick={() => onClick(input)}
-                    className="flex justify-center items-center rounded-full size-8 p-2 bg-cgreen"
+                    className="flex justify-center items-center p-2 rounded-full size-8 bg-cgreen"
                 >
                     <ChainIcon />
                 </button>
@@ -21,7 +21,8 @@ const TranscribeBoxLinkUi = ({
                     value={input}
                     type="text"
                     placeholder="example.com/sample.mp3"
-                    className="  text-gray-500 outline-none grow w-1/2"
+                    className="w-1/2 text-gray-500 dark:bg-neutral-900 bg-gray-100 outline-none grow"
+
                     onChange={(e) => setinput(e.target.value)}
                 />
                 <PasteButton onClick={setinput} />

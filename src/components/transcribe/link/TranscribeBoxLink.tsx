@@ -3,13 +3,27 @@ import TranscribeBoxLinkUi from "./TranscribeBoxLinkUi";
 import Loading from "../../ui/Loading";
 import { useState } from "react";
 import { useQueryLink } from "./useQueryLink";
+import CustomButton from "../../ui/CustomButton";
 
 const TranscribeBoxLink = () => {
     const [input, setinput] = useState<string>("");
-    const { data, isLoading } = useQueryLink(input, "fa");
+    const { data, isLoading, error } = useQueryLink(input, "fa");
 
-    if (data) return <div> data </div>;
+    if (data) {
+        setinput("")//prevent refetching
+        return (
+            <div>
+                <CustomButton
+                    onClick={() => console.log(JSON.stringify(data["data"]))}
+                >
+                    onClick
+                </CustomButton>{" "}
+            </div>
+        );
+    }
+
     if (isLoading) return <Loading />;
+    if (error) console.log("مشکلی پیش آمد، لطفا دوباره امتحان کنید");
     return <TranscribeBoxLinkUi onClick={setinput} />;
 };
 
