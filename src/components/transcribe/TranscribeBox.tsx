@@ -8,7 +8,7 @@ import LangSelect from "../ui/LangSelect";
 
 export type modeType = "link" | "upload" | "record";
 const TranscribeBox = () => {
-    const [mode, setmode] = useState<modeType>("link");
+    const [mode, setmode] = useState<modeType>("upload");
     return (
         <div className="flex flex-col w-full h-[50dvh]">
             <div className="flex gap-2 justify-start items-center">
