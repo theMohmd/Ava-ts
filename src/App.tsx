@@ -13,6 +13,8 @@ const App = () => {
             grid-cols-1 grid-rows-[3rem_1fr]
             md:grid-cols-[5fr_10rem] md:grid-rows-1
             font-iranYekan
+            bg-gray-100 dark:bg-neutral-900
+            dark
             "
         >
             <div className="md:hidden">

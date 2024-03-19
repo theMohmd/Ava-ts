@@ -1,7 +1,14 @@
 const Archive = () => {
-  return (
-    <div>Archive</div>
-  )
-}
+    return (
+        <div
+            onDrop={(e) => {
+                e.preventDefault();
+                console.log(e);
+            }}
+        >
+            Archive
+        </div>
+    );
+};
 
-export default Archive
+export default Archive;
