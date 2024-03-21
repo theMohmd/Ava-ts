@@ -2,14 +2,14 @@
 import { ClipboardIcon } from "./Icons";
 
 const PasteButton = ({
-    onClick,
+    setString,
 }: {
-    onClick: React.Dispatch<React.SetStateAction<string>>;
+    setString: React.Dispatch<React.SetStateAction<string>>;
 }) => {
     const pasteFromClipboard = async () => {
         try {
             const clipboardText = await navigator.clipboard.readText();
-            onClick(clipboardText);
+            setString(clipboardText);
         } catch (error) {
             console.error("Failed to read clipboard contents: ", error);
         }

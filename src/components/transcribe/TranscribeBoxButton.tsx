@@ -1,5 +1,5 @@
 //menu buttons for transcribe component
-import { ChainIcon, MicIcon, UploadIcon } from "./Icons";
+import { ChainIcon, MicIcon, UploadIcon } from "../ui/Icons";
 import { modeType } from "../transcribe/TranscribeBox";
 type TranscribeBoxButtonProps = {
     onClick: (value: React.SetStateAction<modeType>) => void;

@@ -1,8 +1,8 @@
 //component for showing styled alerts
 import { AnimatePresence, motion } from "framer-motion";
 import { useContext, useEffect } from "react";
-import { alertType } from "../@types/alert";
-import { AlertContext } from "../context/AlertContext";
+import { alertType } from "../../@types/alert";
+import { AlertContext } from "../../context/AlertContext";
 const Alert = () => {
     const { alert, setalert } = useContext(AlertContext) as alertType;
     useEffect(() => {

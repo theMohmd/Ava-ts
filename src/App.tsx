@@ -5,7 +5,7 @@ import { Route, Routes } from "react-router-dom";
 import Transcribe from "./pages/Transcribe";
 import Archive from "./pages/Archive";
 import Login from "./pages/Login";
-import Alert from "./alert/Alert";
+import Alert from "./components/alert/Alert";
 import AlertProvider from "./context/AlertContext";
 const App = () => {
     return (

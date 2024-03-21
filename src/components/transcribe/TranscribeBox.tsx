@@ -1,10 +1,10 @@
 //layout of transcribe component
 import { useState } from "react";
-import TranscribeBoxButton from "../ui/TranscribeBoxButton";
 import TranscribeBoxRecord from "./record/TranscribeBoxRecord";
 import TranscribeBoxUpload from "./upload/TranscribeBoxUpload";
 import TranscribeBoxLink from "./link/TranscribeBoxLink";
 import LangSelect from "../ui/LangSelect";
+import TranscribeBoxButton from "./TranscribeBoxButton";
 
 export type modeType = "link" | "upload" | "record";
 const TranscribeBox = () => {
