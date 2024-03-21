@@ -3,6 +3,7 @@ import Logo from "../ui/Logo";
 import { useState } from "react";
 import PhoneNavDropMenu from "./PhoneNavDropMenu.js";
 import { HamburgerIcon } from "../ui/Icons.js";
+import { AnimatePresence } from "framer-motion";
 const PhoneNav = () => {
     const [menu, setmenu] = useState<boolean>(false);
     const handleClick = () => {
@@ -19,7 +20,9 @@ const PhoneNav = () => {
                     </button>
                 </div>
             </div>
-            {menu && <PhoneNavDropMenu onClick={handleClick} />}
+            <AnimatePresence>
+                {menu && <PhoneNavDropMenu onClick={handleClick} />}
+            </AnimatePresence>
         </>
     );
 };

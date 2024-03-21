@@ -10,7 +10,7 @@ const TranscribeBoxLink = () => {
     const { data, isLoading, error } = useQueryLink(input, "fa");
 
     if (data) {
-        setinput("")//prevent refetching
+        setinput(""); //prevent refetching
         return (
             <div>
                 <CustomButton
@@ -22,7 +22,12 @@ const TranscribeBoxLink = () => {
         );
     }
 
-    if (isLoading) return <Loading />;
+    if (isLoading)
+        return (
+            <div className="text-cgreen grid ">
+                <Loading />
+            </div>
+        );
     if (error) console.log("مشکلی پیش آمد، لطفا دوباره امتحان کنید");
     return <TranscribeBoxLinkUi onClick={setinput} />;
 };

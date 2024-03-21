@@ -12,7 +12,7 @@ const PhoneNavDropMenu = ({onClick}: PhoneNavDropMenuProps) => {
             onClick={onClick}
             initial={{ opacity: 0, y: -100 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 100 }}
+            exit={{ opacity: 0, y: -200 }}
         >
             <NavButton to="/Ava/login">
                 <div className="relative right-1">

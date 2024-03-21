@@ -9,9 +9,17 @@ const TranscribeBoxUpload = () => {
     const [file, setfile] = useState<File | null>(null);
     const { data, isLoading, error } = useQueryUpload(file, "fa");
 
-    if (data) return <div> data </div>;
-    if (isLoading) return <Loading />;
-    if (error) console.log('مشکلی پیش آمد، لطفا دوباره امتحان کنید')
+    if (data) {
+        setfile(null);
+        return <div> data </div>;
+    }
+    if (isLoading)
+        return (
+            <div className="text-cgreen grid ">
+                <Loading />
+            </div>
+        );
+    if (error) console.log("مشکلی پیش آمد، لطفا دوباره امتحان کنید");
     return (
         <>
             <TranscribeBoxUploadUi setfile={setfile} />

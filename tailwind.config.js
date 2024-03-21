@@ -1,3 +1,4 @@
+import plugin from "tailwindcss/plugin";
 export const colors = {
     grad1: "#00b5a0",
     grad2: "#00c69b",
@@ -18,5 +19,16 @@ export default {
             },
         },
     },
-    plugins: [],
+    plugins: [
+        plugin(function ({ matchUtilities, theme }) {
+            matchUtilities(
+                {
+                    "animate-delay": (value) => ({
+                        animationDelay: value,
+                    }),
+                },
+                { values: theme("transitionDelay") }
+            );
+        }),
+    ],
 };
