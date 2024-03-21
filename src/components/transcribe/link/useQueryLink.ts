@@ -1,7 +1,8 @@
 //api request for link component of transcribe
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-export const useQueryLink = (input: string, lang: "fa" | "en") =>
+import { langType } from "../../../@types/lang";
+export const useQueryLink = (input: string, lang: langType) =>
     useQuery({
         queryFn: () => {
             return axios.post(

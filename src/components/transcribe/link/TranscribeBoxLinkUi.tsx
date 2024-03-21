@@ -25,7 +25,7 @@ const TranscribeBoxLinkUi = ({
 
                     onChange={(e) => setinput(e.target.value)}
                 />
-                <PasteButton onClick={setinput} />
+                <PasteButton setString={setinput} />
             </div>
             <p dir="rtl" className="mt-5 text-sm text-gray-400">
                 نشانی اینترنتی فایل حاوی (صوتی / تصویری) را وارد و دکمه را فشار

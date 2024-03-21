@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { ArchiveIcon, LoginIcon, SpeechIcon } from "../ui/Icons";
 import NavButton from "./NavButton";
-interface PhoneNavDropMenuProps {
+type PhoneNavDropMenuProps = {
     onClick: () => void;
 }
 const PhoneNavDropMenu = ({onClick}: PhoneNavDropMenuProps) => {

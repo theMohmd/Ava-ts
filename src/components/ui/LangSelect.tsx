@@ -1,7 +1,7 @@
 //component for selecting transcription language
 import { useState } from "react";
 
-type langType = "en" | "fa";
+import { langType } from "../../@types/lang";
 const LangSelect = () => {
     const [lang, setlang] = useState<langType>("fa");
     return (
