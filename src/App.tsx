@@ -7,6 +7,8 @@ import Archive from "./pages/Archive";
 import Login from "./pages/Login";
 import Alert from "./components/alert/Alert";
 import AlertProvider from "./context/AlertContext";
+import { dumbdata } from "./api/dumbData"; //delete me
+import DataPresent from "./components/dataPresent/DataPresent";//delete me
 const App = () => {
     return (
         <AlertProvider>
@@ -17,7 +19,6 @@ const App = () => {
                 md:grid-cols-[5fr_10rem] md:grid-rows-1
                 font-iranYekan
                 bg-gray-100 dark:bg-neutral-900
-                dark
                 "
             >
                 <Alert />
@@ -35,6 +36,7 @@ const App = () => {
                         />
                         <Route path="/Ava/archive" element={<Archive />} />
                         <Route path="/Ava/login" element={<Login />} />
+                        <Route path="/Ava/dev" element={<DataPresent data={dumbdata} />} />//delete me
                     </Routes>
                 </div>
             </div>

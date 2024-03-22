@@ -1,6 +1,9 @@
+import { dumbdata } from "../../../api/dumbData";
+import DataPresent from "../../dataPresent/DataPresent";
 import { MicIcon } from "../../ui/Icons";
 
 const TranscribeBoxRecord = () => {
+    return(<DataPresent data={dumbdata}/>);
     return (
         <div className="flex flex-col justify-center items-center p-2">
             <button className="p-3 pt-4 rounded-full bg-cgreen size-16">

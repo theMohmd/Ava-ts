@@ -15,3 +15,8 @@
         linear-gradient(theme(colors.grad1), theme(colors.grad2));
     backgroundsize: "25% auto";
 }
+button:hover > * {
+    scale: 1.05;
+    transition-duration: 0.2s;
+    opacity: 0.8;
+}
