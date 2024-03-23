@@ -13,7 +13,7 @@ const DataPresent = ({ data }: { data: dataType[] }) => {
                 presentMode={presentMode}
                 setpresentMode={setpresentMode}
             />
-            <div dir="rtl" className="h-[40dvh] overflow-y-auto">
+            <div dir="rtl" className="h-[25dvh] md:h-[30dvh] overflow-y-auto">
                 {presentMode === "simple" ? (
                     <DataPresentSimple data={data} />
                 ) : (

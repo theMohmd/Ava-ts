@@ -15,8 +15,8 @@ const DataPresentToolbar = ({
 }: DataPresentToolbarProps) => {
     return (
         <div className="flex md:flex-row flex-col justify-between text-sm border-b border-b-gray-400">
-            <div className="flex gap-5 justify-center items-center mx-2">
-                <button className="flex gap-1 justify-center items-center mr-auto py-2 px-4 my-2 text-white rounded-full bg-cgreen">
+            <div className="flex gap-5 border-b border-gray-400 md:border-none justify-center items-center ">
+                <button className="flex gap-1 justify-center items-center mr-auto py-2 px-4 m-2 text-white rounded-full bg-cgreen">
                     <p>شروع دوباره</p>
                     <div className="size-4">
                         <RefreshIcon />
@@ -25,7 +25,7 @@ const DataPresentToolbar = ({
                 <button className="flex text-gray-400 size-4">
                     <CopyIcon />
                 </button>
-                <button className="flex text-gray-400 size-4">
+                <button className="flex text-gray-400 size-4 mr-2">
                     <DownloadIcon />
                 </button>
             </div>

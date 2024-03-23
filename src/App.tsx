@@ -7,8 +7,6 @@ import Archive from "./pages/Archive";
 import Login from "./pages/Login";
 import Alert from "./components/alert/Alert";
 import AlertProvider from "./context/AlertContext";
-import { dumbdata } from "./api/dumbData"; //delete me
-import DataPresent from "./components/dataPresent/DataPresent";//delete me
 const App = () => {
     return (
         <AlertProvider>
@@ -28,15 +26,11 @@ const App = () => {
                 <div className="hidden md:block col-start-2">
                     <DesktopNav />
                 </div>
-                <div className=" md:row-start-1">
+                <div className=" md:row-start-1 grid">
                     <Routes>
-                        <Route
-                            path="/Ava/transcribe"
-                            element={<Transcribe />}
-                        />
+                        <Route path="/Ava/transcribe" element={<Transcribe />} />
                         <Route path="/Ava/archive" element={<Archive />} />
                         <Route path="/Ava/login" element={<Login />} />
-                        <Route path="/Ava/dev" element={<DataPresent data={dumbdata} />} />//delete me
                     </Routes>
                 </div>
             </div>

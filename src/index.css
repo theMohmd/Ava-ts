@@ -20,3 +20,26 @@ button:hover > * {
     transition-duration: 0.2s;
     opacity: 0.8;
 }
+/*custom scroll bar*/
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background: #f0f0f0;
+    margin-right: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: #dadada;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
