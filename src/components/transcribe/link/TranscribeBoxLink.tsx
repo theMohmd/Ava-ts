@@ -3,7 +3,6 @@ import TranscribeBoxLinkUi from "./TranscribeBoxLinkUi";
 import Loading from "../../ui/Loading";
 import { useState } from "react";
 import { useQueryLink } from "./useQueryLink";
-import CustomButton from "../../ui/CustomButton";
 
 const TranscribeBoxLink = () => {
     const [input, setinput] = useState<string>("");
@@ -13,11 +12,12 @@ const TranscribeBoxLink = () => {
         setinput(""); //prevent refetching
         return (
             <div>
-                <CustomButton
+                <button
+                    className="button"
                     onClick={() => console.log(JSON.stringify(data["data"]))}
                 >
                     onClick
-                </CustomButton>{" "}
+                </button>
             </div>
         );
     }

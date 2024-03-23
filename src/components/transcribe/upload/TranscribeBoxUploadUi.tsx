@@ -2,7 +2,6 @@
 import { useContext, useRef, useState } from "react";
 import { FileChangeIcon, SendIcon, UploadIcon } from "../../ui/Icons";
 import FileDrop from "../../ui/FileDrop";
-import CustomButton from "../../ui/CustomButton";
 import { AlertContext } from "../../../context/AlertContext";
 import { alertType } from "../../../@types/alert";
 const TranscribeBoxUploadUi = ({
@@ -10,7 +9,7 @@ const TranscribeBoxUploadUi = ({
 }: {
     setfile: React.Dispatch<React.SetStateAction<File | null>>;
 }) => {
-    const {setalert} = useContext(AlertContext) as alertType
+    const { setalert } = useContext(AlertContext) as alertType;
     const inputRef = useRef<HTMLInputElement>(null);
     const [localFile, setlocalFile] = useState<File | null>(null);
 
@@ -29,7 +28,8 @@ const TranscribeBoxUploadUi = ({
             <div className="flex flex-col justify-center items-center ">
                 <p className="text-gray-400 text-2xl">{localFile.name}</p>
                 <div className="flex gap-2 mt-5">
-                    <CustomButton
+                    <button
+                        className="button"
                         onClick={() => {
                             setfile(localFile);
                         }}
@@ -38,8 +38,9 @@ const TranscribeBoxUploadUi = ({
                             <SendIcon />
                         </div>
                         <p>ارسال فایل</p>
-                    </CustomButton>
-                    <CustomButton
+                    </button>
+                    <button
+                        className="button"
                         onClick={() => {
                             setlocalFile(null);
                         }}
@@ -48,7 +49,7 @@ const TranscribeBoxUploadUi = ({
                             <FileChangeIcon />
                         </div>
                         <p>تغییر فایل</p>
-                    </CustomButton>
+                    </button>
                 </div>
             </div>
         );
