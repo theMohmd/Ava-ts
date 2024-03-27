@@ -15,7 +15,7 @@ const ArchiveUi = () => {
                     مدت زمان
                 </p>
             </div>
-            <div className="h-[80vh] md:h-[70vh] p-2 overflow-auto md:px-32 flex-col flex gap-2">
+            <div className="h-[70vh] p-2 overflow-auto md:px-32 flex-col flex gap-2">
                 {data.map((element) => (
                     <ArchiveElement key={element} />
                 ))}

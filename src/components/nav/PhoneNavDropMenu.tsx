@@ -14,19 +14,19 @@ const PhoneNavDropMenu = ({ onClick }: PhoneNavDropMenuProps) => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -200 }}
         >
-            <NavButton to="/Ava/login">
+            <NavButton to="/Ava-ts/login">
                 <div className="size-8 relative right-1">
                     <LoginIcon />
                 </div>
                 <p>ورود | ثبت‌نام</p>
             </NavButton>
-            <NavButton to="/Ava/transcribe">
+            <NavButton to="/Ava-ts/transcribe">
                 <div className="size-8">
                     <SpeechIcon />
                 </div>
                 <p>تبدیل گفتار</p>
             </NavButton>
-            <NavButton to="/Ava/archive">
+            <NavButton to="/Ava-ts/archive">
                 <div className="p-1 size-8">
                     <ArchiveIcon />
                 </div>

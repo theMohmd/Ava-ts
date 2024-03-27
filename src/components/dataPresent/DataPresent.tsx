@@ -17,13 +17,16 @@ const DataPresent = ({
     return (
         <div className="flex-col flex">
             <div className="flex border-b md:flex-row-reverse justify-between flex-col border-gray-400">
-                {toolbar && <DataPresentToolbar />}
                 <DataPresentModeSelect
                     presentMode={presentMode}
                     setpresentMode={setpresentMode}
                 />
+                {toolbar && <DataPresentToolbar />}
             </div>
-            <div dir="rtl" className="h-[25dvh] relative top-[1px] md:h-[30dvh] overflow-y-auto">
+            <div
+                dir="rtl"
+                className="h-[25dvh] relative top-[1px] md:h-[30dvh] overflow-y-auto"
+            >
                 {presentMode === "simple" ? (
                     <DataPresentSimple data={data} />
                 ) : (

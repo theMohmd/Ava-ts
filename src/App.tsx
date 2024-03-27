@@ -7,6 +7,7 @@ import Archive from "./pages/Archive";
 import Login from "./pages/Login";
 import Alert from "./components/alert/Alert";
 import AlertProvider from "./context/AlertContext";
+import Pagination from "./components/ui/Pagination";
 const App = () => {
     return (
         <AlertProvider>
@@ -29,15 +30,15 @@ const App = () => {
                 <div className=" md:row-start-1 grid">
                     <Routes>
                         <Route
-                            path="/Ava"
-                            element={<Navigate replace to="/Ava/transcribe" />}
+                            path="/Ava-ts"
+                            element={<Navigate replace to="/Ava-ts/transcribe" />}
                         />
                         <Route
-                            path="/Ava/transcribe"
+                            path="/Ava-ts/transcribe"
                             element={<Transcribe />}
                         />
-                        <Route path="/Ava/archive" element={<Archive />} />
-                        <Route path="/Ava/login" element={<Login />} />
+                        <Route path="/Ava-ts/archive" element={<Archive />} />
+                        <Route path="/Ava-ts/login" element={<Login />} />
                     </Routes>
                 </div>
             </div>
