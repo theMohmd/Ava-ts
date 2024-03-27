@@ -4,7 +4,13 @@ export const Icon = () => {
 };
 export const SendIcon = () => {
     return (
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg
+            height="100%"
+            width="100%"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
             <path
                 d="M11.5003 12H5.41872M5.24634 12.7972L4.24158 15.7986C3.69128 17.4424 3.41613 18.2643 3.61359 18.7704C3.78506 19.21 4.15335 19.5432 4.6078 19.6701C5.13111 19.8161 5.92151 19.4604 7.50231 18.7491L17.6367 14.1886C19.1797 13.4942 19.9512 13.1471 20.1896 12.6648C20.3968 12.2458 20.3968 11.7541 20.1896 11.3351C19.9512 10.8529 19.1797 10.5057 17.6367 9.81135L7.48483 5.24303C5.90879 4.53382 5.12078 4.17921 4.59799 4.32468C4.14397 4.45101 3.77572 4.78336 3.60365 5.22209C3.40551 5.72728 3.67772 6.54741 4.22215 8.18767L5.24829 11.2793C5.34179 11.561 5.38855 11.7019 5.407 11.8459C5.42338 11.9738 5.42321 12.1032 5.40651 12.231C5.38768 12.375 5.34057 12.5157 5.24634 12.7972Z"
                 stroke="currentColor"
@@ -18,6 +24,8 @@ export const SendIcon = () => {
 export const FileChangeIcon = () => {
     return (
         <svg
+            height="100%"
+            width="100%"
             fill="currentColor"
             viewBox="0 0 1024 1024"
             version="1.1"
@@ -34,6 +42,8 @@ export const FileChangeIcon = () => {
 export const ClipboardIcon = () => {
     return (
         <svg
+            height="100%"
+            width="100%"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -52,6 +62,8 @@ export const ClipboardIcon = () => {
 export const HamburgerIcon = () => {
     return (
         <svg
+            height="100%"
+            width="100%"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -70,10 +82,10 @@ export const HamburgerIcon = () => {
 export const LoginIcon = () => {
     return (
         <svg
+            height="100%"
+            width="100%"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
-            height="28"
-            width="28"
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
@@ -89,8 +101,8 @@ export const LoginIcon = () => {
 export const ArchiveIcon = () => {
     return (
         <svg
-            width="20"
-            height="20"
+            height="100%"
+            width="100%"
             viewBox="0 0 20 20"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -113,8 +125,8 @@ export const ArchiveIcon = () => {
 export const LogoIcon = () => {
     return (
         <svg
-            width="22"
-            height="38"
+            height="100%"
+            width="100%"
             viewBox="0 0 22 38"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -152,8 +164,8 @@ export const LogoIcon = () => {
 export const SpeechIcon = () => {
     return (
         <svg
-            width="22"
-            height="25"
+            width="100%"
+            height="100%"
             viewBox="0 0 22 25"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -200,8 +212,8 @@ export const SpeechIcon = () => {
 export const UserIcon = () => {
     return (
         <svg
-            width="25"
-            height="24"
+            width="100%"
+            height="100%"
             viewBox="0 0 25 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -229,6 +241,8 @@ export const UploadIcon = ({
     return (
         <svg
             viewBox="0 0 20 17"
+            width="100%"
+            height="100%"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             className={color === "white" ? "stroke-white" : "stroke-gray-400"}
@@ -308,7 +322,13 @@ export const MicIcon = ({ color = "white" }: { color?: "white" | "gray" }) => {
 };
 export const RefreshIcon = () => {
     return (
-        <svg viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg
+            width="100%"
+            height="100%"
+            viewBox="0 0 12 13"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
             <g clipPath="url(#clip0_1_864)">
                 <path
                     fillRule="evenodd"
@@ -340,6 +360,8 @@ export const RefreshIcon = () => {
 export const CopyIcon = () => {
     return (
         <svg
+            height="100%"
+            width="100%"
             fill="currentColor"
             viewBox="0 0 16 18"
             xmlns="http://www.w3.org/2000/svg"
@@ -352,6 +374,8 @@ export const CopyIcon = () => {
 export const DownloadIcon = () => {
     return (
         <svg
+            height="100%"
+            width="100%"
             viewBox="0 0 14 15"
             fill="currentColor"
             xmlns="http://www.w3.org/2000/svg"
@@ -366,6 +390,8 @@ export const TimeIcon = () => {
     return (
         <svg
             viewBox="0 0 17 17"
+            height="100%"
+            width="100%"
             fill="currentColor"
             xmlns="http://www.w3.org/2000/svg"
         >
@@ -377,6 +403,8 @@ export const TimeIcon = () => {
 export const TextIcon = () => {
     return (
         <svg
+            height="100%"
+            width="100%"
             viewBox="0 0 17 17"
             fill="none"
             stroke="currentColor"
@@ -401,6 +429,70 @@ export const TextIcon = () => {
                 d="M5.35858 13.3967H15.7064"
                 strokeLinecap="round"
                 strokeLinejoin="round"
+            />
+        </svg>
+    );
+};
+export const DeleteIcon = () => {
+    return (
+        <svg
+            viewBox="0 0 11 16"
+            fill="none"
+            height="100%"
+            width="100%"
+            stroke="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path
+                d="M1.49172 2.56934H9.94577C10.2182 2.56934 10.4375 2.78457 10.4375 3.05192V14.5175C10.4375 14.7848 10.2182 15.0001 9.94577 15.0001H1.49172C1.21931 15.0001 1 14.7848 1 14.5175V3.05192C1 2.78457 1.21931 2.56934 1.49172 2.56934V2.56934Z"
+                strokeMiterlimit="6.2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <path
+                d="M1.03578 1.42236H10.4302"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <path
+                d="M3.04933 4.17505V13.3949"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <path
+                d="M5.71863 4.17505V13.3949"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <path
+                d="M8.38811 4.17505V13.3949"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <path
+                d="M4.35373 1H7.11263"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+        </svg>
+    );
+};
+export const WordIcon = () => {
+    return (
+        <svg
+            width="100%"
+            height="100%"
+            viewBox="0 0 13 18"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path
+                id="Vector"
+                d="M11.7 17.08H1.3C0.585 17.08 0 16.495 0 15.78V2.25996C0 1.54496 0.585 0.959961 1.3 0.959961H6.591C6.942 0.959961 7.753 1.25294 8 1.49994L12.5 5.99994C12.747 6.24694 13 7.01796 13 7.36896V15.78C13 16.495 12.415 17.08 11.7 17.08ZM1.3 1.99994C0.871 1.99994 1 1.83096 1 2.25996V15.2031C1 15.6321 1.571 15.9999 2 15.9999H10.5C10.929 15.9999 12 16.209 12 15.78V7.49994C12 7.29194 11.656 6.64294 11.5 6.49994L8.5 3.49994C7.5 2.49994 7 1.99994 7 1.99994H1.3Z"
+            />
+            <path
+                id="Vector_2"
+                d="M8.41107 13.1799H7.33207L6.73407 10.8399C6.70807 10.7619 6.66907 10.5799 6.61707 10.3199C6.56507 10.0599 6.52607 9.87795 6.52607 9.79995C6.51307 9.90395 6.48707 10.0859 6.43507 10.3329C6.38307 10.5799 6.34407 10.7489 6.31807 10.8529L5.72007 13.1799H4.64107L3.51007 8.72095H4.43307L5.00507 11.1519C5.10907 11.6069 5.17407 11.9839 5.22607 12.3219C5.23907 12.2049 5.26507 12.0229 5.30407 11.7889C5.34307 11.5549 5.39507 11.3599 5.42107 11.2299L6.07107 8.73395H6.96807L7.61807 11.2299C7.64407 11.3469 7.68307 11.5159 7.72207 11.7369C7.76107 11.9579 7.80007 12.1659 7.82607 12.3219C7.85207 12.1659 7.87807 11.9709 7.93007 11.7239C7.98207 11.4769 8.02107 11.2949 8.04707 11.1519L8.61907 8.72095H9.54207L8.41107 13.1799Z"
             />
         </svg>
     );

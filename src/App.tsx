@@ -1,7 +1,7 @@
 //general layout of website
 import PhoneNav from "./components/nav/PhoneNav";
 import DesktopNav from "./components/nav/DesktopNav";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import Transcribe from "./pages/Transcribe";
 import Archive from "./pages/Archive";
 import Login from "./pages/Login";
@@ -28,7 +28,14 @@ const App = () => {
                 </div>
                 <div className=" md:row-start-1 grid">
                     <Routes>
-                        <Route path="/Ava/transcribe" element={<Transcribe />} />
+                        <Route
+                            path="/Ava"
+                            element={<Navigate replace to="/Ava/transcribe" />}
+                        />
+                        <Route
+                            path="/Ava/transcribe"
+                            element={<Transcribe />}
+                        />
                         <Route path="/Ava/archive" element={<Archive />} />
                         <Route path="/Ava/login" element={<Login />} />
                     </Routes>

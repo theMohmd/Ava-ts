@@ -9,7 +9,9 @@ const Logo = () => {
             "
         >
             <p className="text-xl font-[700]">آوا</p>
-            <LogoIcon />
+            <div className="size-8">
+                <LogoIcon />
+            </div>
         </div>
     );
 };

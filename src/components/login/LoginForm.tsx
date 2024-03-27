@@ -2,9 +2,9 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { z } from "zod";
-import { AlertContext } from "../context/AlertContext";
+import { AlertContext } from "../../context/AlertContext";
 import { useContext } from "react";
-import { alertType } from "../@types/alert";
+import { alertType } from "../../@types/alert";
 const schema = z.object({
     email: z.string().email(),
     password: z.string().min(8),
@@ -27,7 +27,7 @@ const LoginForm = () => {
         try {
             await new Promise((resolve) => setTimeout(resolve, 1000));
             console.log(data);
-            setalert("'ورود واقعی نبوده و فقط برای دمو می‌باشد");
+            setalert("ورود واقعی نبوده و فقط برای دمو می‌باشد");
         } catch (error) {
             setError("root", {
                 message: "This email is already taken",
@@ -44,7 +44,7 @@ const LoginForm = () => {
                 className="input"
                 {...register("email")}
                 type="text"
-                placeholder="Email"
+                placeholder="ایمیل"
             />
             {errors.email && (
                 <div className="text-red-500">{errors.email.message}</div>
@@ -53,13 +53,13 @@ const LoginForm = () => {
                 className="input"
                 {...register("password")}
                 type="password"
-                placeholder="Password"
+                placeholder="کلمه عبور"
             />
             {errors.password && (
                 <div className="text-red-500">{errors.password.message}</div>
             )}
-            <button className="button" disabled={isSubmitting} type="submit">
-                {isSubmitting ? "Loading..." : "Submit"}
+            <button dir="rtl" className="button" disabled={isSubmitting} type="submit">
+                {isSubmitting ? "درحال ورود..." : "ورود"}
             </button>
             {errors.root && (
                 <div className="text-red-500">{errors.root.message}</div>
