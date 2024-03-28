@@ -3,7 +3,13 @@ import { dumbdata } from "../../api/dumbData";
 import DataPresent from "../dataPresent/DataPresent";
 import ArchiveElementToolbar from "./ArchiveElementToolbar";
 import { AnimatePresence, motion } from "framer-motion";
-const ArchiveElement = () => {
+type ArchiveElementProps = {
+    name: string;
+    date: string;
+    duration: string;
+    id: number;
+};
+const ArchiveElement = ({ name, date, duration, id }: ArchiveElementProps) => {
     const [expanded, setexpanded] = useState(false);
     return (
         <div
@@ -15,17 +21,19 @@ const ArchiveElement = () => {
                 onClick={() => {
                     setexpanded((prev) => !prev);
                 }}
-                className="grid grid-cols-4 md:grid-cols-5"
+                className="grid grid-cols-[1fr_1fr_3fr] md:grid-cols-[1fr_1fr_1fr_4fr]"
             >
                 <div className="hidden md:block">
                     <ArchiveElementToolbar />
                 </div>
                 <div className="justify-center flex items-center">
-                    2024-03-18
+                    {duration}
                 </div>
-                <div className="justify-center flex items-center">00:00:44</div>
-                <div className="justify-end col-span-2 text-right flex items-center">
-                    name
+                <div className="justify-center flex items-center">
+                    {date.substring(0, 10)}
+                </div>
+                <div className="justify-end text-right flex text-ellipsis items-center overflow-hidden max-w-[100%] whitespace-nowrap text-ellipsis'">
+                    {name}
                 </div>
             </div>
             <AnimatePresence>

@@ -12,6 +12,7 @@ dist
 dist-ssr
 *.local
 todo.txt
+ignore
 
 # Editor directories and files
 .vscode/*

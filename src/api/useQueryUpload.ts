@@ -1,7 +1,7 @@
 //api request for upload component of transcribe
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import { langType } from "../../../@types/lang";
+import { langType } from "../@types/lang";
 export const useQueryUpload = (input: File | null, lang: langType) =>
     useQuery({
         queryFn: () => {
@@ -21,4 +21,5 @@ export const useQueryUpload = (input: File | null, lang: langType) =>
         },
         queryKey: ["upload"],
         enabled: input !== null,
+        staleTime: Infinity,
     });

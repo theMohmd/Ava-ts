@@ -7,7 +7,7 @@ import Archive from "./pages/Archive";
 import Login from "./pages/Login";
 import Alert from "./components/alert/Alert";
 import AlertProvider from "./context/AlertContext";
-import Pagination from "./components/ui/Pagination";
+//import Pagination from "./components/ui/Pagination";
 const App = () => {
     return (
         <AlertProvider>

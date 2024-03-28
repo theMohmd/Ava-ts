@@ -1,23 +1,32 @@
 import ArchiveElement from "./ArchiveElement";
 
-const data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
-const ArchiveUi = () => {
+type dataType = {
+    date: string;
+    duration: string;
+    id: number;
+    request_data: { language: string; media_urls: string[] };
+    request_type: string;
+};
+const ArchiveUi = ({ data }: { data: dataType[] }) => {
     return (
         <>
-            <div className="grid grid-cols-4 md:grid-cols-5 md:px-36 md:pr-[9.5rem] grid-rows-1 mb-2 text-sm md:text-base text-center px-6 ">
-                <p className=" text-right row-start-1 col-start-4 md:col-start-5">
-                    نام فایل
-                </p>
-                <p className=" row-start-1 col-start-2 md:col-start-3">
-                    تاریخ بارگذاری
-                </p>
-                <p className=" row-start-1 col-start-1 md:col-start-2">
-                    مدت زمان
-                </p>
+            <div
+                dir="rtl"
+                className="grid flex-row-reverse grid-rows-1 px-6 mb-2 text-sm text-center md:px-36 md:text-base grid-cols-[3fr_1fr_1fr] md:grid-cols-[4fr_1fr_1fr_1fr] md:pr-[9.5rem]"
+            >
+                <p className="text-right pr-2">نام فایل</p>
+                <p className="">تاریخ بارگذاری</p>
+                <p className="">مدت زمان</p>
             </div>
-            <div className="h-[70vh] p-2 overflow-auto md:px-32 flex-col flex gap-2">
+            <div className="flex overflow-auto flex-col gap-2 p-2 md:px-32 h-[70vh]">
                 {data.map((element) => (
-                    <ArchiveElement key={element} />
+                    <ArchiveElement
+                        key={element.id}
+                        id={element.id}
+                        name={element.request_data.media_urls[0]}
+                        duration={element.duration}
+                        date={element.date}
+                    />
                 ))}
             </div>
         </>

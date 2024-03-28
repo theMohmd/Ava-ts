@@ -11,12 +11,22 @@ const theme = createTheme({
         fontFamily: `"IranSans", sans-serif`,
     },
 });
-const ArchivePagination = () => {
+const ArchivePagination = ({
+    count,
+    setpage,
+}: {
+    count: number;
+    setpage: React.Dispatch<React.SetStateAction<number>>;
+}) => {
     return (
         <ThemeProvider theme={theme}>
             <Pagination
-                count={10}
+                count={count}
                 color="primary"
+                onChange={(event, page) => {
+                    event;
+                    setpage(page);
+                }}
                 sx={{
                     direction: "rtl",
                     "& .Mui-selected": {

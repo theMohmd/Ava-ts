@@ -1,25 +1,17 @@
-//manage data and ui of linx component
+//manage data and ui of link component
 import TranscribeBoxLinkUi from "./TranscribeBoxLinkUi";
 import Loading from "../../ui/Loading";
 import { useState } from "react";
-import { useQueryLink } from "./useQueryLink";
+import { useQueryLink } from "../../../api/useQueryLink";
+import DataPresent from "../../dataPresent/DataPresent";
 
 const TranscribeBoxLink = () => {
     const [input, setinput] = useState<string>("");
     const { data, isLoading, error } = useQueryLink(input, "fa");
 
     if (data) {
-        setinput(""); //prevent refetching
-        return (
-            <div>
-                <button
-                    className="button"
-                    onClick={() => console.log(JSON.stringify(data["data"]))}
-                >
-                    onClick
-                </button>
-            </div>
-        );
+        console.log(data)
+        return <DataPresent data={data["data"][0]["segments"]} />;
     }
 
     if (isLoading)

@@ -2,7 +2,7 @@
 import { useState } from "react";
 import TranscribeBoxUploadUi from "./TranscribeBoxUploadUi";
 import Loading from "../../ui/Loading";
-import { useQueryUpload } from "./useQueryUpload";
+import { useQueryUpload } from "../../../api/useQueryUpload";
 
 TranscribeBoxUploadUi;
 const TranscribeBoxUpload = () => {

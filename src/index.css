@@ -13,7 +13,8 @@
 .navBg {
     background: Url("src/assets/Alefba.svg"),
         linear-gradient(theme(colors.grad1), theme(colors.grad2));
-    backgroundsize: "25% auto";
+    background-size: 125% auto;
+    background-position: right;
 }
 button:hover > * {
     scale: 1.05;

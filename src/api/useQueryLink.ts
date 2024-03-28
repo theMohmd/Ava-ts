@@ -1,7 +1,7 @@
 //api request for link component of transcribe
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import { langType } from "../../../@types/lang";
+import { langType } from "../@types/lang";
 export const useQueryLink = (input: string, lang: langType) =>
     useQuery({
         queryFn: () => {
@@ -16,4 +16,5 @@ export const useQueryLink = (input: string, lang: langType) =>
         },
         queryKey: ["link"],
         enabled: input !== "",
+        staleTime: Infinity,
     });
