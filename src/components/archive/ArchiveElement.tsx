@@ -8,13 +8,36 @@ type ArchiveElementProps = {
     date: string;
     duration: string;
     id: number;
+    localid: number;
 };
-const ArchiveElement = ({ name, date, duration, id }: ArchiveElementProps) => {
+const ArchiveElement = ({
+    name,
+    date,
+    duration,
+    id,
+    localid,
+}: ArchiveElementProps) => {
+    const motionVariant = {
+        hidden: {
+            opacity:0,
+        },
+        visible: {
+            opacity:1,
+            transition: {
+                delay: 0.1 * localid,
+            },
+        },
+    };
     const [expanded, setexpanded] = useState(false);
     return (
-        <div
+        <motion.div
+            animate="visible"
+            initial="hidden"
+            variants={motionVariant}
             className={` duration-500 py-2 px-4 text-sm text-center rounded-md border  ${
-                expanded ? "border-cgreen" : "border-gray-200 dark:border-neutral-800"
+                expanded
+                    ? "border-cgreen"
+                    : "border-gray-200 dark:border-neutral-800"
             }  hover:shadow-md shrink-0`}
         >
             <div
@@ -47,7 +70,7 @@ const ArchiveElement = ({ name, date, duration, id }: ArchiveElementProps) => {
                     </motion.div>
                 )}
             </AnimatePresence>
-        </div>
+        </motion.div>
     );
 };
 

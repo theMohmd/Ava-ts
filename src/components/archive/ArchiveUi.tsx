@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import ArchiveElement from "./ArchiveElement";
 
 type dataType = {
@@ -18,17 +19,22 @@ const ArchiveUi = ({ data }: { data: dataType[] }) => {
                 <p className="">تاریخ بارگذاری</p>
                 <p className="">مدت زمان</p>
             </div>
-            <div className="flex overflow-auto flex-col gap-2 p-2 md:px-32 h-[70vh]">
-                {data.map((element) => (
+            <motion.div
+                animate="visible"
+                initial="hidden"
+                className="flex overflow-auto flex-col gap-2 p-2 md:px-32 h-[70vh]"
+            >
+                {data.map((element,index) => (
                     <ArchiveElement
                         key={element.id}
                         id={element.id}
+                        localid= {index}
                         name={element.request_data.media_urls[0]}
                         duration={element.duration}
                         date={element.date}
                     />
                 ))}
-            </div>
+            </motion.div>
         </>
     );
 };

@@ -26,7 +26,7 @@ const ArchivePagination = ({
                     event;
                     setpage(page);
                 }}
-                className=" [&>ul>li>button]:dark:text-gray-200"
+                className=" [&>ul>li>div]:dark:text-gray-200 [&>ul>li>button]:dark:text-gray-200"
                 sx={{
                     direction: "rtl",
                     "& .Mui-selected": {
