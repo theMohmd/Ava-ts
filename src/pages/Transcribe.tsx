@@ -1,4 +1,5 @@
 //layout of transcribe page
+import { motion } from "framer-motion";
 import TranscribeBox from "../components/transcribe/TranscribeBox";
 
 const Transcribe = () => {
@@ -12,9 +13,13 @@ const Transcribe = () => {
                 فارسی را یاد گرفته است و می‌تواند متن صحبت‌ها را بنویسد.
             </p>
 
-            <div className="grid mt-10 w-full md:w-1/2">
+            <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="grid mt-10 w-full md:w-1/2"
+            >
                 <TranscribeBox />
-            </div>
+            </motion.div>
         </div>
     );
 };

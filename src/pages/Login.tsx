@@ -1,12 +1,17 @@
 import { useState } from "react";
 import LoginForm from "../components/login/LoginForm";
 import SignupForm from "../components/login/SignupForm";
+import { motion } from "framer-motion";
 
 const Login = () => {
     const [mode, setmode] = useState<"signup" | "login">("login");
     return (
         <div className="grid justify-center items-center">
-            <div className="grid p-5 rounded-xl md:p-10 navBg h-[60dvh] w-[80dvw] md:w-[60dvw]">
+            <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="grid p-5 rounded-xl md:p-10 navBg h-[60dvh] w-[80dvw] md:w-[60dvw]"
+            >
                 <div className="flex overflow-hidden flex-col gap-5 md:flex-row">
                     <div
                         className={`grid duration-500 overflow-hidden order-1 ${
@@ -45,7 +50,7 @@ const Login = () => {
                         <SignupForm />
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </div>
     );
 };
