@@ -3,7 +3,7 @@
 Ava is a front-end internship project designed for transcribing audio files.
 It utilizes ReactJs, TypeScript, Tailwindcss, Axios, React-hook-form, Mui, Framer-motion, Zod, React-router and React Query.
 
-- [Click here to see the deployment](https://themohmd.github.io/Ava-ts)
+- [Click here to see the deployment](https://themohmd.github.io/Ava-ts.git)
   
 ## Installation
 
