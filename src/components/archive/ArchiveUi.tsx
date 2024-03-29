@@ -20,8 +20,6 @@ const ArchiveUi = ({ data }: { data: dataType[] }) => {
                 <p className="">مدت زمان</p>
             </div>
             <motion.div
-                animate="visible"
-                initial="hidden"
                 className="flex overflow-auto flex-col gap-2 p-2 md:px-32 h-[70vh]"
             >
                 {data.map((element,index) => (
