@@ -6,10 +6,13 @@ import { useQueryLink } from "../../../api/useQueryLink";
 import DataPresent from "../../dataPresent/DataPresent";
 import { AlertContext } from "../../../context/AlertContext";
 import { alertType } from "../../../@types/alert";
+import { LangContext } from "../../../context/LangContext";
+import { langContextType } from "../../../@types/lang";
 
 const TranscribeBoxLink = () => {
     const [input, setinput] = useState<string>("");
-    const { data, isLoading, error } = useQueryLink(input, "fa");
+    const { lang } = useContext(LangContext) as langContextType;
+    const { data, isLoading, error } = useQueryLink(input, lang);
     const { setalert } = useContext(AlertContext) as alertType;
     const reset = useCallback(() => {
         setinput("");

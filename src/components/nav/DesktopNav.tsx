@@ -1,18 +1,9 @@
 //navigation bar for Desktop
 import Logo from "../ui/Logo";
-import {
-    ArchiveIcon,
-    LoginIcon,
-    MoonIcon,
-    SpeechIcon,
-    SunIcon,
-} from "../ui/Icons.js";
+import { ArchiveIcon, LoginIcon, SpeechIcon } from "../ui/Icons.js";
 import NavButton from "./NavButton.js";
-const DesktopNav = ({
-    setdark,
-}: {
-    setdark: React.Dispatch<React.SetStateAction<boolean>>;
-}) => {
+import ThemeButton from "../ui/ThemeButton.js";
+const DesktopNav = () => {
     return (
         <div className="flex flex-col gap-2 py-5 px-2 h-full navBg rounded-[1rem_0_0_1rem]">
             <div className="mb-10">
@@ -36,20 +27,7 @@ const DesktopNav = ({
                     <ArchiveIcon />
                 </div>
             </NavButton>
-            <button
-                onClick={() => {
-                    setdark((prev) => !prev);
-                }}
-                className="flex justify-evenly items-center py-2 px-4 mt-auto text-sm font-bold text-center text-white rounded-[10px] bg-cActiveGreen hover:brightness-125"
-            >
-                <div className="size-6">
-                    <SunIcon />
-                </div>
-                <p className="relative top-[2px]">/</p>
-                <div className="size-5">
-                    <MoonIcon />
-                </div>
-            </button>
+            <ThemeButton />
         </div>
     );
 };

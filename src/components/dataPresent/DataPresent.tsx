@@ -17,7 +17,7 @@ const DataPresent = ({
         "simple"
     );
     return (
-        <div className="flex-col flex">
+        <div className="flex-col flex dark:text-gray-200">
             <div className="flex border-b md:flex-row-reverse justify-between flex-col border-gray-400">
                 <DataPresentModeSelect
                     presentMode={presentMode}

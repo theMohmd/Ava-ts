@@ -1,16 +1,16 @@
 //component for selecting transcription language
-import { useState } from "react";
-
-import { langType } from "../../@types/lang";
+import { useContext } from "react";
+import { langContextType } from "../../@types/lang";
+import { LangContext } from "../../context/LangContext";
 const LangSelect = () => {
-    const [lang, setlang] = useState<langType>("fa");
+    const { lang, setlang } = useContext(LangContext) as langContextType;
     return (
         <div className="flex text-gray-400">
             <button
                 onClick={() => {
                     setlang("en");
                 }}
-                className={lang === "en" ? "text-cgreen": ""}
+                className={lang === "en" ? "text-cgreen" : ""}
             >
                 en
             </button>
@@ -19,7 +19,7 @@ const LangSelect = () => {
                 onClick={() => {
                     setlang("fa");
                 }}
-                className={lang === "fa" ? "text-cgreen": ""}
+                className={lang === "fa" ? "text-cgreen" : ""}
             >
                 فا
             </button>

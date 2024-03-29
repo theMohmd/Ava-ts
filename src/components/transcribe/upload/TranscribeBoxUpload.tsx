@@ -6,11 +6,13 @@ import { useQueryUpload } from "../../../api/useQueryUpload";
 import { AlertContext } from "../../../context/AlertContext";
 import { alertType } from "../../../@types/alert";
 import DataPresent from "../../dataPresent/DataPresent";
+import { LangContext } from "../../../context/LangContext";
+import { langContextType } from "../../../@types/lang";
 TranscribeBoxUploadUi;
 const TranscribeBoxUpload = () => {
+    const { lang } = useContext(LangContext) as langContextType;
     const [file, setfile] = useState<File | null>(null);
-    const { data, isLoading, error } = useQueryUpload(file, "fa");
-
+    const { data, isLoading, error } = useQueryUpload(file, lang);
     const { setalert } = useContext(AlertContext) as alertType;
     const reset = useCallback(() => {
         setfile(null);

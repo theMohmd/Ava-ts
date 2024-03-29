@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { ArchiveIcon, LoginIcon, SpeechIcon } from "../ui/Icons";
 import NavButton from "./NavButton";
+import ThemeButton from "../ui/ThemeButton";
 type PhoneNavDropMenuProps = {
     onClick: () => void;
 };
@@ -32,6 +33,7 @@ const PhoneNavDropMenu = ({ onClick }: PhoneNavDropMenuProps) => {
                 </div>
                 <p>آرشیو</p>
             </NavButton>
+            <ThemeButton />
         </motion.div>
     );
 };
