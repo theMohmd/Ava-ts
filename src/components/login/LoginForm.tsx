@@ -36,10 +36,10 @@ const LoginForm = () => {
     };
     return (
         <form
-            className="flex flex-col gap-2 justify-center p-5 bg-white rounded-md"
+            className="flex flex-col gap-2 justify-center p-5 bg-white rounded-md dark:bg-neutral-900"
             onSubmit={handleSubmit(onSubmit)}
         >
-            <p className="text-center text-2xl font-bold text-cgreen">ورود</p>
+            <p className="text-2xl font-bold text-center text-cgreen">ورود</p>
             <input
                 className="input"
                 {...register("email")}

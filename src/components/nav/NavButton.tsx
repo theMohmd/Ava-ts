@@ -14,7 +14,7 @@ const NavButton = ({children, to}: NavButtonProp) => {
                     backgroundColor: isActive ? "rgba(0,0,0,0.5)" : "",
                 };
             }}
-            className=" flex justify-between items-center py-2 px-4 font-bold text-center text-sm text-white rounded-[10px] bg-cActiveGreen brightness-125"
+            className="hover:brightness-125 flex justify-between items-center py-2 px-4 font-bold text-center text-sm text-white rounded-[10px] bg-cActiveGreen "
         >
             {children}
         </NavLink>

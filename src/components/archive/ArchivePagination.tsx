@@ -4,7 +4,6 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 const theme = createTheme({
     palette: {
         primary: { main: "#00BA9F", contrastText: "white" },
-        background: { paper: "green" },
     },
     direction: "rtl",
     typography: {
@@ -27,11 +26,11 @@ const ArchivePagination = ({
                     event;
                     setpage(page);
                 }}
+                className=" [&>ul>li>button]:dark:text-gray-200"
                 sx={{
                     direction: "rtl",
                     "& .Mui-selected": {
                         color: "text.secondary",
-                        background: "background.paper",
                     },
                 }}
             />

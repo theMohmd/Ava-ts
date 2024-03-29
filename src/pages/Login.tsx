@@ -30,7 +30,7 @@ const Login = () => {
                                     else return "signup";
                                 })
                             }
-                            className="button !bg-white !text-cgreen rounded-xl p2 "
+                            className="button dark:!bg-neutral-900 !bg-white !text-cgreen rounded-xl p2 "
                         >
                             {mode === "signup" ? "ورود" : "ثبت‌نام"}
                         </button>

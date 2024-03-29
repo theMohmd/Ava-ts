@@ -8,11 +8,21 @@ import Login from "./pages/Login";
 import Alert from "./components/alert/Alert";
 import AlertProvider from "./context/AlertContext";
 import LinkToCode from "./components/ui/LinkToCode";
+import { useState } from "react";
 //import Pagination from "./components/ui/Pagination";
 const App = () => {
+    const [dark, setdark] = useState(true);
     return (
         <AlertProvider>
-            <div className="grid grid-cols-1 min-h-screen bg-gray-100 md:grid-rows-1 grid-rows-[3rem_1fr] font-iranYekan md:grid-cols-[5fr_10rem] dark:bg-neutral-900">
+            <div
+                className={`
+                grid grid-cols-1 grid-rows-[3rem_1fr]
+                md:grid-cols-[5fr_10rem] md:grid-rows-1
+                min-h-screen
+                font-iranYekan
+                bg-gray-100
+                ${dark ? "dark" : null}  dark:bg-neutral-900`}
+            >
                 {/*link to source code*/}
 
                 <LinkToCode />
@@ -22,7 +32,7 @@ const App = () => {
                     <PhoneNav />
                 </div>
                 <div className="hidden col-start-2 md:block">
-                    <DesktopNav />
+                    <DesktopNav setdark={setdark} />
                 </div>
                 <div className="grid md:row-start-1">
                     <Routes>

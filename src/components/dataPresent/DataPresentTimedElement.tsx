@@ -6,6 +6,7 @@ const DataPresentTimedElement = ({ segment }: { segment: dataType }) => {
               p-5
               rounded-xl
               odd:bg-gray-200
+              dark:odd:bg-neutral-800
               flex gap-4
               "
         >

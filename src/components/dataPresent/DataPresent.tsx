@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { dataType } from "../../@types/dataType";
 import DataPresentToolbar from "./DataPresentToolbar";
 import DataPresentSimple from "./DataPresentSimple";

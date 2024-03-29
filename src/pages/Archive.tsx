@@ -18,7 +18,7 @@ const Archive = () => {
     const { setalert } = useContext(AlertContext) as alertType;
     if (error) setalert("مشکلی پیش آمد، صفحه را رفرش کنید.");
     return (
-        <div className="flex flex-col p-5 md:p-10">
+        <div className="dark:text-gray-200 flex flex-col p-5 md:p-10">
             <h1 className="mb-5 text-2xl text-right md:mt-16 text-cgreen">
                 آرشیو من
             </h1>

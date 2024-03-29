@@ -14,7 +14,7 @@ const ArchiveElement = ({ name, date, duration, id }: ArchiveElementProps) => {
     return (
         <div
             className={` duration-500 py-2 px-4 text-sm text-center rounded-md border  ${
-                expanded ? "border-cgreen" : "border-gray-200"
+                expanded ? "border-cgreen" : "border-gray-200 dark:border-neutral-800"
             }  hover:shadow-md shrink-0`}
         >
             <div

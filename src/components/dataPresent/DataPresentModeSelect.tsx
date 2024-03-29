@@ -14,7 +14,7 @@ const DataPresentModeSelect = ({
                 onClick={() => {
                     setpresentMode("timed");
                 }}
-                className={`border-black gap-1 justify-center p-2 items-center mr-auto relative top-[1px] h-full
+                className={`border-cgreen gap-1 justify-center p-2 items-center mr-auto relative top-[1px] h-full
                     ${presentMode === "timed" ? "border-b" : " null"}  flex`}
             >
                 <p>متن زمان‌بندی شده</p>
@@ -26,7 +26,7 @@ const DataPresentModeSelect = ({
                 onClick={() => {
                     setpresentMode("simple");
                 }}
-                className={`border-black gap-1 justify-center p-2 items-center relative top-[1px] h-full
+                className={`border-cgreen gap-1 justify-center p-2 items-center relative top-[1px] h-full
                     ${
                         presentMode === "simple"
                             ? "border-b border-black"

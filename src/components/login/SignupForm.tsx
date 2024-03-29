@@ -35,7 +35,7 @@ const SignupForm = () => {
     };
     return (
         <form
-            className="flex flex-col gap-2 justify-center p-5 bg-white rounded-md"
+            className="flex flex-col gap-2 justify-center dark:bg-neutral-900 p-5 bg-white rounded-md"
             onSubmit={handleSubmit(onSubmit)}
         >
             <p className="text-center text-2xl font-bold text-cgreen">ثبت‌نام</p>
