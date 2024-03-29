@@ -5,6 +5,8 @@ import { langType } from "../@types/lang";
 export const useQueryLink = (input: string, lang: langType) =>
     useQuery({
         queryFn: () => {
+            console.log('1')
+            console.log('2')
             return axios.post(
                 "https://harf.roshan-ai.ir/api/transcribe_files/",
                 {

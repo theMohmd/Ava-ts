@@ -1,12 +1,18 @@
-import { dumbdata } from "../../../api/dumbData";
-import DataPresent from "../../dataPresent/DataPresent";
+import { useContext } from "react";
 import { MicIcon } from "../../ui/Icons";
+import { AlertContext } from "../../../context/AlertContext";
+import { alertType } from "../../../@types/alert";
 
 const TranscribeBoxRecord = () => {
-    return(<DataPresent data={dumbdata}/>);
+    const { setalert } = useContext(AlertContext) as alertType;
     return (
         <div className="flex flex-col justify-center items-center p-2">
-            <button className="p-3 pt-4 rounded-full bg-cgreen size-16">
+            <button
+                onClick={() => {
+                    setalert("این بخش صرفا دمو بوده و کار نمی‌کند");
+                }}
+                className="p-3 pt-4 rounded-full bg-cgreen size-16"
+            >
                 <MicIcon />
             </button>
             <p dir="rtl" className="mt-5 text-sm text-gray-400">

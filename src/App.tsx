@@ -7,31 +7,30 @@ import Archive from "./pages/Archive";
 import Login from "./pages/Login";
 import Alert from "./components/alert/Alert";
 import AlertProvider from "./context/AlertContext";
+import LinkToCode from "./components/ui/LinkToCode";
 //import Pagination from "./components/ui/Pagination";
 const App = () => {
     return (
         <AlertProvider>
-            <div
-                className="
-                min-h-screen grid
-                grid-cols-1 grid-rows-[3rem_1fr]
-                md:grid-cols-[5fr_10rem] md:grid-rows-1
-                font-iranYekan
-                bg-gray-100 dark:bg-neutral-900
-                "
-            >
+            <div className="grid grid-cols-1 min-h-screen bg-gray-100 md:grid-rows-1 grid-rows-[3rem_1fr] font-iranYekan md:grid-cols-[5fr_10rem] dark:bg-neutral-900">
+                {/*link to source code*/}
+
+                <LinkToCode />
+                {/*custom alert box*/}
                 <Alert />
                 <div className="md:hidden">
                     <PhoneNav />
                 </div>
-                <div className="hidden md:block col-start-2">
+                <div className="hidden col-start-2 md:block">
                     <DesktopNav />
                 </div>
-                <div className=" md:row-start-1 grid">
+                <div className="grid md:row-start-1">
                     <Routes>
                         <Route
                             path="/Ava-ts"
-                            element={<Navigate replace to="/Ava-ts/transcribe" />}
+                            element={
+                                <Navigate replace to="/Ava-ts/transcribe" />
+                            }
                         />
                         <Route
                             path="/Ava-ts/transcribe"

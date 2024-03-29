@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { dataType } from "../../@types/dataType";
 import DataPresentToolbar from "./DataPresentToolbar";
 import DataPresentSimple from "./DataPresentSimple";
@@ -7,9 +7,11 @@ import DataPresentModeSelect from "./DataPresentModeSelect";
 const DataPresent = ({
     data,
     toolbar = true,
+    reset,
 }: {
     data: dataType[];
     toolbar?: boolean;
+    reset?: () => void;
 }) => {
     const [presentMode, setpresentMode] = useState<"simple" | "timed">(
         "simple"
@@ -21,7 +23,7 @@ const DataPresent = ({
                     presentMode={presentMode}
                     setpresentMode={setpresentMode}
                 />
-                {toolbar && <DataPresentToolbar />}
+                {toolbar && reset && <DataPresentToolbar reset={reset} />}
             </div>
             <div
                 dir="rtl"

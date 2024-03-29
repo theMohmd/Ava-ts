@@ -9,6 +9,7 @@ export const useQueryUpload = (input: File | null, lang: langType) =>
             const bodyFormData = new FormData();
             bodyFormData.append("language", lang);
             bodyFormData.append("media", input);
+            console.log('hi')
             return axios.post(
                 "https://harf.roshan-ai.ir/api/transcribe_files/",
                 bodyFormData,

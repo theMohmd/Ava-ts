@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { dumbdata } from "../../api/dumbData";
-import DataPresent from "../dataPresent/DataPresent";
 import ArchiveElementToolbar from "./ArchiveElementToolbar";
 import { AnimatePresence, motion } from "framer-motion";
+import ArchiveElementExpanded from "./ArchiveElementExpanded";
+
 type ArchiveElementProps = {
     name: string;
     date: string;
@@ -21,20 +21,20 @@ const ArchiveElement = ({ name, date, duration, id }: ArchiveElementProps) => {
                 onClick={() => {
                     setexpanded((prev) => !prev);
                 }}
-                className="grid grid-cols-[1fr_1fr_3fr] md:grid-cols-[1fr_1fr_1fr_4fr]"
+                className="items-center grid grid-cols-[1fr_1fr_3fr] md:grid-cols-[1fr_1fr_1fr_4fr]"
             >
                 <div className="hidden md:block">
                     <ArchiveElementToolbar />
                 </div>
-                <div className="justify-center flex items-center">
+                <div className="flex justify-center items-center font-iranSans">
                     {duration}
                 </div>
-                <div className="justify-center flex items-center">
+                <div className="flex justify-center items-center font-iranSans">
                     {date.substring(0, 10)}
                 </div>
-                <div className="justify-end text-right flex text-ellipsis items-center overflow-hidden max-w-[100%] whitespace-nowrap text-ellipsis'">
+                <p className=" overflow-hidden items-center text-right whitespace-nowrap text-ellipsis'">
                     {name}
-                </div>
+                </p>
             </div>
             <AnimatePresence>
                 {expanded && (
@@ -43,12 +43,7 @@ const ArchiveElement = ({ name, date, duration, id }: ArchiveElementProps) => {
                         animate={{ height: "100%", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
                     >
-                        <div className="grid col-start-1 col-end-6 row-start-2 mt-4">
-                            <DataPresent toolbar={false} data={dumbdata} />
-                        </div>
-                        <div className="flex mt-[1px] py-2 justify-center border-gray-400 md:hidden border-t">
-                            <ArchiveElementToolbar />
-                        </div>
+                        <ArchiveElementExpanded id={id} />
                     </motion.div>
                 )}
             </AnimatePresence>
