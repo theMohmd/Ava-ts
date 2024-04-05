@@ -10,19 +10,19 @@ const Login = () => {
             <motion.div
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="grid p-5 rounded-xl md:p-10 navBg h-[60dvh] w-[80dvw] md:w-[60dvw]"
+                className="grid p-5 rounded-xl md:p-10 navBg h-[80dvh] w-[80dvw] md:w-[60dvw]"
             >
-                <div className="flex overflow-hidden flex-col gap-5 md:flex-row">
+                <div className="flex overflow-hidden flex-col md:flex-row">
                     <div
-                        className={`grid duration-500 overflow-hidden order-1 ${
+                        className={`grid duration-500 overflow-hidden order-2 mb-5 md:mb-0 ${
                             mode === "login"
-                                ? "h-2/3 md:w-2/3 md:h-full"
+                                ? "h-4/5 md:w-2/3 md:h-full"
                                 : "h-0 md:w-0 md:h-full"
                         }  `}
                     >
                         <LoginForm />
                     </div>
-                    <div className="flex flex-col gap-2 justify-center order-4 h-1/3 md:order-2 md:w-1/3 md:h-full">
+                    <div className="flex flex-col order-1 gap-2 justify-center h-1/3 md:mx-5 md:order-3 md:w-1/3 md:h-full">
                         <p className="text-center text-white">
                             {mode === "signup"
                                 ? "قبلا حساب ساخته اید؟"
@@ -41,9 +41,9 @@ const Login = () => {
                         </button>
                     </div>
                     <div
-                        className={`grid duration-500 overflow-hidden order-3 ${
+                        className={`grid duration-500 overflow-hidden order-4  ${
                             mode === "signup"
-                                ? "h-2/3 md:w-2/3 md:h-full"
+                                ? "h-4/5 md:w-2/3 md:h-full"
                                 : "h-0 md:w-0 md:h-full"
                         }  `}
                     >
