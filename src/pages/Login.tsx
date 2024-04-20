@@ -2,6 +2,8 @@ import { useState } from "react";
 import LoginForm from "../components/login/LoginForm";
 import SignupForm from "../components/login/SignupForm";
 import { motion } from "framer-motion";
+import Alefba from "../assets/svg/Alefba.svg";
+import colors from "../../colors.ts";
 
 const Login = () => {
     const [mode, setmode] = useState<"signup" | "login">("login");
@@ -10,7 +12,10 @@ const Login = () => {
             <motion.div
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="grid p-5 rounded-xl md:p-10 navBg h-[80dvh] w-[80dvw] md:w-[60dvw]"
+                style={{
+                    backgroundImage: `url(${Alefba}) ,linear-gradient(${colors.grad1}, ${colors.grad2})`,
+                }}
+                className="grid p-5 rounded-xl md:p-10 h-[80dvh] w-[80dvw] md:w-[60dvw]"
             >
                 <div className="flex overflow-hidden flex-col md:flex-row">
                     <div

@@ -10,9 +10,7 @@
     font-family: "iranSans";
     src: url("assets/iranSans.ttf");
 }
-.navBg {
-    background: Url("Alefba.svg"),
-        linear-gradient(theme(colors.grad1), theme(colors.grad2));
+.alefbaBg {
     background-size: 125% auto;
     background-position: right;
 }
@@ -43,22 +41,8 @@ button:hover > * {
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
-/* Change Autocomplete styles in Chrome*/
-input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus,
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover,
-textarea:-webkit-autofill:focus,
-select:-webkit-autofill,
-select:-webkit-autofill:hover,
-select:-webkit-autofill:focus {
-    -webkit-text-fill-color: white;
-    -webkit-box-shadow: 0 0 0px 1000px theme('colors.neutral[800]') inset;
-    transition: background-color 5000s ease-in-out 0s;
-}
 
 /*custom button*/
 .button{@apply flex gap-2 justify-center items-center py-2 px-4 text-white rounded-md bg-cgreen;}
 /*custom input*/
-.input{@apply bg-neutral-800 dark:text-white outline-cgreen border rounded-md p-2 border-cgreen;}
+.input{@apply dark:bg-neutral-800 dark:text-white outline-cgreen border rounded-md p-2 border-cgreen;}

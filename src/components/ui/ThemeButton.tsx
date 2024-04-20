@@ -9,7 +9,7 @@ const ThemeButton = () => {
             onClick={() => {
                 settheme((prev) => !prev);
             }}
-            className="flex justify-evenly items-center py-2 px-4 mt-auto text-sm font-bold text-center text-white rounded-[10px] bg-cActiveGreen hover:brightness-125"
+            className="flex justify-evenly items-center py-2 px-4 mt-auto text-sm font-bold text-center text-white rounded-[10px] bg-cgreenDark hover:brightness-125"
         >
             <div className="size-6">
                 <SunIcon />
