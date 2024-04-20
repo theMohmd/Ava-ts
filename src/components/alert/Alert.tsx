@@ -18,7 +18,7 @@ const Alert = () => {
                     initial={{ left: -100, opacity: 0 }}
                     animate={{ left: 10, opacity: 100 }}
                     exit={{ left: -100, opacity: 0 }}
-                    className=" text-right min-w-60 bg-red-400 rounded-md border-red-800 border p-5 absolute top-5 left-5"
+                    className="absolute z-50 top-5 left-5 p-5 text-right bg-red-400 rounded-md border border-red-800 min-w-60"
                 >
                     {alert}
                 </motion.div>
