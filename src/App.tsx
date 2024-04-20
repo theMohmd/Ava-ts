@@ -17,7 +17,7 @@ const App = () => {
             className={`
                 grid grid-cols-1 grid-rows-[3rem_1fr]
                 md:grid-cols-[5fr_10rem] md:grid-rows-1
-                min-h-dvh
+                h-dvh
                 font-iranYekan
                 bg-gray-100
                 ${theme ? "dark" : null}  dark:bg-neutral-900`}
