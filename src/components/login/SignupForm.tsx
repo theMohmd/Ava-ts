@@ -1,27 +1,19 @@
-import { zodResolver } from "@hookform/resolvers/zod";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { z } from "zod";
-import { AlertContext } from "../../context/AlertContext";
-import { useContext } from "react";
-import { alertType } from "../../@types/alert";
+import { useAlert } from "../../hooks/useAlert";
 
-const schema = z.object({
-    email: z.string().email(),
-    password: z.string().min(8),
-    confirmPassword: z.string().min(8),
-    name: z.string(),
-});
-type FormFields = z.infer<typeof schema>;
+type FormFields = {
+    name: string;
+    email: string;
+    password: string;
+};
 const SignupForm = () => {
     const {
         register,
         handleSubmit,
         setError,
         formState: { errors, isSubmitting },
-    } = useForm<FormFields>({
-        resolver: zodResolver(schema),
-    });
-    const { setalert } = useContext(AlertContext) as alertType;
+    } = useForm<FormFields>();
+    const { setalert } = useAlert()
     const onSubmit: SubmitHandler<FormFields> = async (data) => {
         try {
             await new Promise((resolve) => setTimeout(resolve, 1000));
@@ -40,40 +32,50 @@ const SignupForm = () => {
         >
             <p className="text-center text-2xl font-bold text-cgreen">ثبت‌نام</p>
             <input
+                {...register("name", {
+                    required: "نام کاربری نمی‌تواند خالی باشد",
+                })}
                 className="input"
-                {...register("name")}
                 type="text"
-                placeholder="نام"
+                placeholder="نام کاربری"
             />
             {errors.name && (
-                <div className="text-red-500">{errors.name.message}</div>
+                <p className="text-red-700 text-right">{errors.name.message}</p>
             )}
             <input
+                {...register("email", {
+                    required: "ایمیل نمی‌تواند خالی باشد",
+                    pattern: {
+                        value: /[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$/,
+                        message: "ایمیل معتبر نیست",
+                    },
+                })}
                 className="input"
-                {...register("email")}
                 type="text"
                 placeholder="ایمیل"
             />
             {errors.email && (
-                <div className="text-red-500">{errors.email.message}</div>
+                <p className="text-red-700 text-right">
+                    {errors.email.message}
+                </p>
             )}
             <input
+                {...register("password", {
+                    required: "کلمه عبور نمی‌تواند خالی باشد",
+
+                    minLength: {
+                        value: 8,
+                        message: "کلمه عبور حداقل باید ۸ کاراکتر داشته باشد",
+                    },
+                })}
                 className="input"
-                {...register("password")}
                 type="password"
-                placeholder="کلمه عبور"
+                placeholder="کلمه‌عبور"
             />
             {errors.password && (
-                <div className="text-red-500">{errors.password.message}</div>
-            )}
-            <input
-                className="input"
-                {...register("confirmPassword")}
-                type="password"
-                placeholder="تکرار کلمه عبور"
-            />
-            {errors.confirmPassword && (
-                <div className="text-red-500">{errors.confirmPassword.message}</div>
+                <p className="text-red-700 text-right">
+                    {errors.password.message}
+                </p>
             )}
             <button
                 dir="rtl"

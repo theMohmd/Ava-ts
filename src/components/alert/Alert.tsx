@@ -1,10 +1,10 @@
 //component for showing styled alerts
 import { AnimatePresence, motion } from "framer-motion";
-import { useContext, useEffect } from "react";
-import { alertType } from "../../@types/alert";
-import { AlertContext } from "../../context/AlertContext";
+import { useEffect } from "react";
+import { useAlert } from "../../hooks/useAlert";
+
 const Alert = () => {
-    const { alert, setalert } = useContext(AlertContext) as alertType;
+    const { alert, setalert } = useAlert();
     useEffect(() => {
         if (alert)
             setTimeout(() => {

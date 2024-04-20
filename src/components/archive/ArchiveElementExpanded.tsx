@@ -2,13 +2,11 @@ import DataPresent from "../dataPresent/DataPresent";
 import { useQuerySingleArchive } from "../../api/useQuerySingleArchive";
 import Loading from "../ui/Loading";
 import ArchiveElementToolbar from "./ArchiveElementToolbar";
-import { useContext } from "react";
-import { AlertContext } from "../../context/AlertContext";
-import { alertType } from "../../@types/alert";
+import { useAlert } from "../../hooks/useAlert";
 
 const ArchiveElementExpanded = ({ id }: { id: number }) => {
     const { data, isLoading, error } = useQuerySingleArchive(id);
-    const {setalert} = useContext(AlertContext) as alertType
+    const {setalert} = useAlert()
     if(error) setalert('مشکلی وجود دارد، کمی صبر کرده و دوباره امتحان کنید')
     if (data)
         return (
@@ -16,7 +14,7 @@ const ArchiveElementExpanded = ({ id }: { id: number }) => {
                 <div className="grid col-start-1 col-end-6 row-start-2 mt-4">
                     <DataPresent
                         toolbar={false}
-                        data={data.data.response_data[0].segments}
+                        data={data}
                     />
                 </div>
                 <div className="flex justify-center py-2 border-t border-gray-400 md:hidden mt-[1px]">

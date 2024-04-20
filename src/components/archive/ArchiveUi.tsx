@@ -5,8 +5,7 @@ type dataType = {
     date: string;
     duration: string;
     id: number;
-    request_data: { language: string; media_urls: string[] };
-    request_type: string;
+    name: string;
 };
 const ArchiveUi = ({ data }: { data: dataType[] }) => {
     return (
@@ -19,15 +18,13 @@ const ArchiveUi = ({ data }: { data: dataType[] }) => {
                 <p className="">تاریخ بارگذاری</p>
                 <p className="">مدت زمان</p>
             </div>
-            <motion.div
-                className="flex overflow-auto flex-col gap-2 p-2 md:px-32 h-[70vh]"
-            >
-                {data.map((element,index) => (
+            <motion.div className="flex overflow-auto flex-col gap-2 p-2 md:px-32 h-[70vh]">
+                {data.map((element, index) => (
                     <ArchiveElement
                         key={element.id}
                         id={element.id}
-                        localid= {index}
-                        name={element.request_data.media_urls[0]}
+                        localid={index}
+                        name={element.name}
                         duration={element.duration}
                         date={element.date}
                     />

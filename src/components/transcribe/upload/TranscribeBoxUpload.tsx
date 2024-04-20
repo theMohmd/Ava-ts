@@ -3,24 +3,23 @@ import { useCallback, useContext, useState } from "react";
 import TranscribeBoxUploadUi from "./TranscribeBoxUploadUi";
 import Loading from "../../ui/Loading";
 import { useQueryUpload } from "../../../api/useQueryUpload";
-import { AlertContext } from "../../../context/AlertContext";
-import { alertType } from "../../../@types/alert";
 import DataPresent from "../../dataPresent/DataPresent";
 import { LangContext } from "../../../context/LangContext";
 import { langContextType } from "../../../@types/lang";
-TranscribeBoxUploadUi;
+import { useAlert } from "../../../hooks/useAlert";
+
 const TranscribeBoxUpload = () => {
     const { lang } = useContext(LangContext) as langContextType;
     const [file, setfile] = useState<File | null>(null);
     const { data, isLoading, error } = useQueryUpload(file, lang);
-    const { setalert } = useContext(AlertContext) as alertType;
+    const { setalert } = useAlert()
     const reset = useCallback(() => {
         setfile(null);
     }, []);
     if (file) {
         if (data) {
             return (
-                <DataPresent reset={reset} data={data["data"][0]["segments"]} />
+                <DataPresent reset={reset} data={data} />
             );
         }
         if (isLoading)

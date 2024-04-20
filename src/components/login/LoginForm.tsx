@@ -1,16 +1,8 @@
 //login form
-import { zodResolver } from "@hookform/resolvers/zod";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { z } from "zod";
-import { AlertContext } from "../../context/AlertContext";
-import { useContext } from "react";
-import { alertType } from "../../@types/alert";
-const schema = z.object({
-    email: z.string().email(),
-    password: z.string().min(8),
-});
+import { useAlert } from "../../hooks/useAlert";
 
-type FormFields = z.infer<typeof schema>;
+type FormFields = { email: string; password: string };
 
 const LoginForm = () => {
     const {
@@ -18,11 +10,9 @@ const LoginForm = () => {
         handleSubmit,
         setError,
         formState: { errors, isSubmitting },
-    } = useForm<FormFields>({
-        resolver: zodResolver(schema),
-    });
+    } = useForm<FormFields>();
 
-    const { setalert } = useContext(AlertContext) as alertType;
+    const { setalert } = useAlert()
     const onSubmit: SubmitHandler<FormFields> = async (data) => {
         try {
             await new Promise((resolve) => setTimeout(resolve, 1000));
@@ -41,22 +31,38 @@ const LoginForm = () => {
         >
             <p className="text-2xl font-bold text-center text-cgreen">ورود</p>
             <input
+                {...register("email", {
+                    required: "ایمیل نمی‌تواند خالی باشد",
+                    pattern: {
+                        value: /[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$/,
+                        message: "ایمیل معتبر نیست",
+                    },
+                })}
                 className="input"
-                {...register("email")}
                 type="text"
                 placeholder="ایمیل"
             />
             {errors.email && (
-                <div className="text-red-500">{errors.email.message}</div>
+                <p className="text-red-500 text-right">
+                    {errors.email.message}
+                </p>
             )}
             <input
+                {...register("password", {
+                    required: "کلمه عبور نمی‌تواند خالی باشد",
+                    minLength: {
+                        value: 8,
+                        message: "کلمه عبور حداقل باید ۸ کاراکتر داشته باشد",
+                    },
+                })}
                 className="input"
-                {...register("password")}
                 type="password"
                 placeholder="کلمه عبور"
             />
             {errors.password && (
-                <div className="text-red-500">{errors.password.message}</div>
+                <p className="text-red-500 text-right">
+                    {errors.password.message}
+                </p>
             )}
             <button dir="rtl" className="button" disabled={isSubmitting} type="submit">
                 {isSubmitting ? "درحال ورود..." : "ورود"}

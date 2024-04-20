@@ -8,11 +8,15 @@ const TranscribeBoxLinkUi = ({
     onClick: React.Dispatch<React.SetStateAction<string>>;
 }) => {
     const [input, setinput] = useState<string>("");
+    const [error, seterror] = useState(false);
     return (
         <div className="flex flex-col justify-center items-center h-full">
             <div className="flex gap-1 p-1 rounded-full border border-cgreen">
                 <button
-                    onClick={() => onClick(input)}
+                    onClick={() => {
+                        if (!input) seterror(true);
+                        else onClick(input);
+                    }}
                     className="flex justify-center items-center p-2 rounded-full size-8 bg-cgreen"
                 >
                     <ChainIcon />
@@ -21,8 +25,7 @@ const TranscribeBoxLinkUi = ({
                     value={input}
                     type="text"
                     placeholder="example.com/sample.mp3"
-                    className="w-1/2 text-gray-500 dark:bg-neutral-900 bg-gray-100 outline-none grow"
-
+                    className="w-1/2 text-gray-500 dark:text-neutral-200 dark:bg-neutral-900 bg-gray-100 outline-none grow"
                     onChange={(e) => setinput(e.target.value)}
                 />
                 <PasteButton setString={setinput} />
@@ -31,6 +34,7 @@ const TranscribeBoxLinkUi = ({
                 نشانی اینترنتی فایل حاوی (صوتی / تصویری) را وارد و دکمه را فشار
                 دهید
             </p>
+            {error && <p className="mt-2 text-red-500">لینک نمی‌تواند خالی باشد</p>}
         </div>
     );
 };

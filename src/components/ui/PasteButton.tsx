@@ -1,21 +1,19 @@
 //button to paste from clipboard
-import { useContext } from "react";
 import { ClipboardIcon } from "./Icons";
-import { AlertContext } from "../../context/AlertContext";
-import { alertType } from "../../@types/alert";
+import { useAlert } from "../../hooks/useAlert";
 
 const PasteButton = ({
     setString,
 }: {
     setString: React.Dispatch<React.SetStateAction<string>>;
 }) => {
-    const { setalert } = useContext(AlertContext) as alertType;
+    const { setalert } = useAlert()
     const pasteFromClipboard = async () => {
         try {
             const clipboardText = await navigator.clipboard.readText();
             setString(clipboardText);
         } catch (error) {
-            setalert("مشکلی در خواندن کلیپرود وجود دارد." );
+            setalert("مشکلی در خواندن کلیپبورد وجود دارد" );
         }
     };
     return (

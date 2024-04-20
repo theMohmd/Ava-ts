@@ -4,23 +4,23 @@ import Loading from "../../ui/Loading";
 import { useCallback, useContext, useState } from "react";
 import { useQueryLink } from "../../../api/useQueryLink";
 import DataPresent from "../../dataPresent/DataPresent";
-import { AlertContext } from "../../../context/AlertContext";
-import { alertType } from "../../../@types/alert";
 import { LangContext } from "../../../context/LangContext";
 import { langContextType } from "../../../@types/lang";
+import { useAlert } from "../../../hooks/useAlert";
+
 
 const TranscribeBoxLink = () => {
     const [input, setinput] = useState<string>("");
     const { lang } = useContext(LangContext) as langContextType;
     const { data, isLoading, error } = useQueryLink(input, lang);
-    const { setalert } = useContext(AlertContext) as alertType;
+    const { setalert } = useAlert()
     const reset = useCallback(() => {
         setinput("");
     }, []);
     if (input) {
         if (data) {
             return (
-                <DataPresent reset={reset} data={data["data"][0]["segments"]} />
+                <DataPresent reset={reset} data={data} />
             );
         }
 

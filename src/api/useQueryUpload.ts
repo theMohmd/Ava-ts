@@ -1,10 +1,18 @@
 //api request for upload component of transcribe
 import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
+//import axios from "axios";
 import { langType } from "../@types/lang";
-export const useQueryUpload = (input: File | null, lang: langType) =>
-    useQuery({
-        queryFn: () => {
+import { dumbdata } from "./dumbData";
+import { useAlert } from "../hooks/useAlert";
+export const useQueryUpload = (input: File | null, lang: langType) => {
+    const { setalert } = useAlert();
+    return useQuery({
+        queryFn: async () => {
+            setalert("این نتیجه صرفا برای دمو می‌باشد");
+            await new Promise((r) => setTimeout(r, 500));
+            return dumbdata;
+
+            /*
             if (!input) return;
             const bodyFormData = new FormData();
             bodyFormData.append("language", lang);
@@ -18,8 +26,11 @@ export const useQueryUpload = (input: File | null, lang: langType) =>
                     },
                 }
             );
+            */
         },
-        queryKey: ["upload",lang],
+        queryKey: ["upload", lang],
         enabled: input !== null,
         staleTime: Infinity,
+        refetchIntervalInBackground: false,
     });
+};

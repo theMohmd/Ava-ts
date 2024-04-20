@@ -44,7 +44,7 @@ const ArchiveElement = ({
                 onClick={() => {
                     setexpanded((prev) => !prev);
                 }}
-                className="items-center grid grid-cols-[1fr_1fr_3fr] md:grid-cols-[1fr_1fr_1fr_4fr]"
+                className="cursor-pointer items-center grid grid-cols-[1fr_1fr_3fr] md:grid-cols-[1fr_1fr_1fr_4fr]"
             >
                 <div className="hidden md:block">
                     <ArchiveElementToolbar />

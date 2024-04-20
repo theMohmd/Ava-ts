@@ -1,13 +1,12 @@
-import { ReactNode, useContext } from "react";
-import { AlertContext } from "../../context/AlertContext";
-import { alertType } from "../../@types/alert";
+import { ReactNode } from "react";
+import { useAlert } from "../../hooks/useAlert";
 
 type FileDropProps = {
     children: ReactNode;
     setfile: React.Dispatch<React.SetStateAction<File | null>>;
 };
 const FileDrop = ({ children, setfile: setfiles }: FileDropProps) => {
-    const {setalert} = useContext(AlertContext) as alertType
+    const { setalert } = useAlert();
     const handleDrop = (e: React.DragEvent<HTMLDivElement>) => {
         e.preventDefault();
         const file: FileList = e.dataTransfer.files;

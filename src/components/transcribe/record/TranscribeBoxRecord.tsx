@@ -1,10 +1,8 @@
-import { useContext } from "react";
 import { MicIcon } from "../../ui/Icons";
-import { AlertContext } from "../../../context/AlertContext";
-import { alertType } from "../../../@types/alert";
+import { useAlert } from "../../../hooks/useAlert";
 
 const TranscribeBoxRecord = () => {
-    const { setalert } = useContext(AlertContext) as alertType;
+    const { setalert } = useAlert()
     return (
         <div className="flex flex-col justify-center items-center p-2">
             <button

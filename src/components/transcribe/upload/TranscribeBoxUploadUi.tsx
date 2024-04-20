@@ -1,15 +1,14 @@
 //ui of upload component for transcribe
-import { useContext, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { FileChangeIcon, SendIcon, UploadIcon } from "../../ui/Icons";
 import FileDrop from "../../ui/FileDrop";
-import { AlertContext } from "../../../context/AlertContext";
-import { alertType } from "../../../@types/alert";
+import { useAlert } from "../../../hooks/useAlert";
 const TranscribeBoxUploadUi = ({
     setfile,
 }: {
     setfile: React.Dispatch<React.SetStateAction<File | null>>;
 }) => {
-    const { setalert } = useContext(AlertContext) as alertType;
+    const { setalert } = useAlert();
     const inputRef = useRef<HTMLInputElement>(null);
     const [localFile, setlocalFile] = useState<File | null>(null);
 
@@ -26,7 +25,9 @@ const TranscribeBoxUploadUi = ({
     if (localFile)
         return (
             <div className="flex flex-col justify-center items-center ">
-                <p className=" border border-cgreen rounded-md py-2 px-6 w-full text-gray-400 text-2xl">{localFile.name}</p>
+                <p className=" border border-cgreen rounded-md py-2 px-6 w-full text-gray-400 text-2xl">
+                    {localFile.name}
+                </p>
                 <div className="flex gap-2 w-full mt-2">
                     <button
                         className="button grow"
