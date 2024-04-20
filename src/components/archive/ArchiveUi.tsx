@@ -18,7 +18,7 @@ const ArchiveUi = ({ data }: { data: dataType[] }) => {
                 <p className="">تاریخ بارگذاری</p>
                 <p className="">مدت زمان</p>
             </div>
-            <motion.div className="flex overflow-auto flex-col gap-2 p-2 md:px-32 h-[70vh]">
+            <motion.div className="flex overflow-auto flex-col gap-2 p-2 md:px-32 max-h-[65vh]">
                 {data.map((element, index) => (
                     <ArchiveElement
                         key={element.id}

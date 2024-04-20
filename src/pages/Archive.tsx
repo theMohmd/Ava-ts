@@ -29,7 +29,7 @@ const Archive = () => {
             ) : (
                 !!data && <ArchiveUi data={data.results} />
             )}
-            <div className="flex justify-center mt-auto">
+            <div className="flex justify-center mt-auto ">
                 <ArchivePagination count={chachePageCount} setpage={setpage} />
             </div>
         </div>
