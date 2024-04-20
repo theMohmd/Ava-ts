@@ -18,13 +18,14 @@ const TranscribeBoxButton = ({
                 flex justify-center items-center
                 gap-2 rounded-xl   py-2
                 px-2 h-full
+                duration-200
                 ${
                     mode === type
                         ? "text-white bg-cgreen text-base rounded-b-none "
-                        : "text-sm  font-light text-gray-400"
+                        : "text-sm font-light text-white md:text-gray-400"
                 } `}
         >
-            <p className={` ${mode === type ? null : "hidden"}  md:block`}>
+            <p className={` ${mode === type ? null : "hidden"} md:block`}>
                 {type === "upload"
                     ? "بارگذاری فایل"
                     : type === "record"
@@ -33,11 +34,11 @@ const TranscribeBoxButton = ({
                         ? "لینک"
                         : null}
             </p>
-            <div className="size-4 [&>*]:object-contain">
+            <div className="size-10 md:p-0 md:size-4 p-2 bg-cgreen md:bg-transparent rounded-full [&>*]:object-contain">
                 {type === "upload" ? (
                     <UploadIcon color={mode === type ? "white" : "gray"} />
                 ) : type === "record" ? (
-                    <div className="size-4">
+                    <div className="size-6 md:size-4">
                         <MicIcon color={mode === type ? "white" : "gray"} />
                     </div>
                 ) : type === "link" ? (
