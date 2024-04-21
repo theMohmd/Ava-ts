@@ -1,7 +1,7 @@
 //general layout of website
 import PhoneNav from "./components/nav/PhoneNav";
 import DesktopNav from "./components/nav/DesktopNav";
-import { Route, Routes, Navigate } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Transcribe from "./pages/Transcribe";
 import Archive from "./pages/Archive";
 import Login from "./pages/Login";
@@ -10,6 +10,7 @@ import LinkToCode from "./components/ui/LinkToCode";
 import { useContext } from "react";
 import { ThemeContext } from "./context/ThemeContext";
 import { themeContextType } from "./@types/theme";
+import Home from "./pages/Home";
 const App = () => {
     const { theme } = useContext(ThemeContext) as themeContextType;
     return (
@@ -35,10 +36,7 @@ const App = () => {
             </div>
             <div className="grid md:row-start-1">
                 <Routes>
-                    <Route
-                        path="/Ava-ts"
-                        element={<Navigate replace to="/Ava-ts/transcribe" />}
-                    />
+                    <Route path="/Ava-ts" element={<Home />} />
                     <Route path="/Ava-ts/transcribe" element={<Transcribe />} />
                     <Route path="/Ava-ts/archive" element={<Archive />} />
                     <Route path="/Ava-ts/login" element={<Login />} />
