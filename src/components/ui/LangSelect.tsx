@@ -1,9 +1,8 @@
 //component for selecting transcription language
-import { useContext } from "react";
-import { langContextType } from "../../@types/lang";
-import { LangContext } from "../../context/LangContext";
+import { useLang } from "../../hooks/useLang";
+
 const LangSelect = () => {
-    const { lang, setlang } = useContext(LangContext) as langContextType;
+    const {lang,setlang} = useLang()
     return (
         <div className="flex text-gray-400">
             <button

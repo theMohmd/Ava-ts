@@ -1,17 +1,16 @@
 //manage data and ui of link component
 import TranscribeBoxLinkUi from "./TranscribeBoxLinkUi";
 import Loading from "../../ui/Loading";
-import { useCallback, useContext, useState } from "react";
+import { useCallback, useState } from "react";
 import { useQueryLink } from "../../../api/useQueryLink";
 import DataPresent from "../../dataPresent/DataPresent";
-import { LangContext } from "../../../context/LangContext";
-import { langContextType } from "../../../@types/lang";
 import { useAlert } from "../../../hooks/useAlert";
+import { useLang } from "../../../hooks/useLang";
 
 
 const TranscribeBoxLink = () => {
     const [input, setinput] = useState<string>("");
-    const { lang } = useContext(LangContext) as langContextType;
+    const { lang } = useLang()
     const { data, isLoading, error } = useQueryLink(input, lang);
     const { setalert } = useAlert()
     const reset = useCallback(() => {
