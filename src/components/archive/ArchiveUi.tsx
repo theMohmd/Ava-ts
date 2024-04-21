@@ -9,16 +9,14 @@ type dataType = {
 };
 const ArchiveUi = ({ data }: { data: dataType[] }) => {
     return (
-        <>
-            <div
-                dir="rtl"
-                className="grid flex-row-reverse grid-rows-1 px-6 mb-2 text-sm text-center md:px-36 md:text-base grid-cols-[3fr_1fr_1fr] md:grid-cols-[4fr_1fr_1fr_1fr] md:pr-[9.5rem]"
-            >
-                <p className="text-right pr-2">نام فایل</p>
-                <p className="">تاریخ بارگذاری</p>
-                <p className="">مدت زمان</p>
-            </div>
-            <motion.div className="flex overflow-auto flex-col gap-2 p-2 md:px-32 max-h-[65vh]">
+        <div className="">
+            <motion.div className="flex overflow-auto flex-col gap-2 p-2 md:px-1 max-h-[75dvh]">
+                <div className="grid items-center grid-cols-[1fr_1fr_2fr] md:grid-cols-[1fr_1fr_1fr_4fr] px-4 text-xs md:text-sm text-center shrink-0">
+                    <div className="hidden md:block" />
+                    <p className="">مدت زمان</p>
+                    <p className="">تاریخ بارگذاری</p>
+                    <p className="pr-2 text-right ">نام فایل</p>
+                </div>
                 {data.map((element, index) => (
                     <ArchiveElement
                         key={element.id}
@@ -30,7 +28,7 @@ const ArchiveUi = ({ data }: { data: dataType[] }) => {
                     />
                 ))}
             </motion.div>
-        </>
+        </div>
     );
 };
 

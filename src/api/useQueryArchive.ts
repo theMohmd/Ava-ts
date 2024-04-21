@@ -10,7 +10,7 @@ const dumbArchiveData = {
             date: "24/4/17",
             duration: "4:20",
             id: 1,
-            name: "demo1",
+            name: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
         },
         {
             date: "24/4/17",

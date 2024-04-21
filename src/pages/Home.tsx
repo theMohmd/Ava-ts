@@ -2,10 +2,16 @@ const Home = () => {
     return (
         <div
             dir="rtl"
-            className="[&_p]:mt-4 [&>p]:dark:text-neutral-300 overflow-auto h-[calc(100dvh_-_3rem)] [&>p]:text-neutral-600 [&_div]:text-white [&_h3]:text-2xl dark:text-white text-center pt-10  md:pt-20 px-10 "
+            className="
+            py-10 md:py-20 px-10 text-center dark:text-white
+            [&_p]:mt-2 [&_p]:md:mt-4 [&_p]:text-sm [&_p]:md:text-base
+            [&>p]:dark:text-neutral-300 [&>p]:text-neutral-600
+            [&_div]:text-white
+            [&_h3]:text-xl [&_h3]:md:text-2xl
+            "
         >
-            <h1 className="text-4xl font-bold text-cgreen">آوا</h1>
-            <h1 className="mt-8 text-3xl">سرویس تبدیل صوت به متن</h1>
+            <h1 className="text-3xl font-bold md:text-4xl text-cgreen">آوا</h1>
+            <h1 className="mt-8 text-2xl md:text-3xl">سرویس تبدیل صوت به متن</h1>
             <p className="">
                 با استفاده از سرویس ما به راحتی فایل‌های صوتی خود را به متن در
                 زبان‌های انگلیسی و فارسی تبدیل کنید!

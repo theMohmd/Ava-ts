@@ -13,11 +13,11 @@ const Login = () => {
                 style={{
                     backgroundSize: "50% auto",
                 }}
-                className="alefbaBg grid p-5 rounded-xl md:p-10 h-[80dvh] w-[80dvw] md:w-[60dvw]"
+                className="alefbaBg grid p-2 rounded-xl md:p-4 h-[80dvh] w-[80dvw] md:w-[60dvw]"
             >
                 <div className="flex overflow-hidden flex-col md:flex-row">
                     <div
-                        className={`grid duration-500 overflow-hidden order-2 mb-5 md:mb-0 ${
+                        className={`grid duration-500 overflow-y-auto overflow-x-hidden  order-2 mb-5 md:mb-0 ${
                             mode === "login"
                                 ? "h-4/5 md:w-2/3 md:h-full"
                                 : "h-0 md:w-0 md:h-full"
@@ -44,7 +44,7 @@ const Login = () => {
                         </button>
                     </div>
                     <div
-                        className={`grid duration-500 overflow-hidden order-4  ${
+                        className={`grid duration-500 overflow-y-auto overflow-x-hidden order-4  ${
                             mode === "signup"
                                 ? "h-4/5 md:w-2/3 md:h-full"
                                 : "h-0 md:w-0 md:h-full"

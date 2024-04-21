@@ -34,7 +34,7 @@ const App = () => {
             <div className="hidden col-start-2 md:block">
                 <DesktopNav />
             </div>
-            <div className="grid md:row-start-1">
+            <div className="grid overflow-auto md:row-start-1">
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/transcribe" element={<Transcribe />} />
