@@ -9,7 +9,7 @@ const ArchiveElementToolbar = () => {
             className="flex justify-start items-center pt-0 text-gray-400"
         >
             <button
-                className={`rounded-full hover:text-white hover:bg-cred ${className}`}
+                className={`rounded-full hover:text-white hover:bg-red-600 ${className}`}
             >
                 <DeleteIcon />
             </button>

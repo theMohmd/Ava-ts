@@ -44,7 +44,7 @@ const ArchiveElement = ({
                 onClick={() => {
                     setexpanded((prev) => !prev);
                 }}
-                className="cursor-pointer items-center grid grid-cols-[1fr_1fr_3fr] md:grid-cols-[1fr_1fr_1fr_4fr]"
+                className="grid items-center cursor-pointer grid-cols-[1fr_1fr_3fr] md:grid-cols-[1fr_1fr_1fr_4fr]"
             >
                 <div className="hidden md:block">
                     <ArchiveElementToolbar />
@@ -55,7 +55,7 @@ const ArchiveElement = ({
                 <div className="flex justify-center items-center font-iranSans">
                     {date.substring(0, 10)}
                 </div>
-                <p className=" overflow-hidden items-center text-right whitespace-nowrap text-ellipsis'">
+                <p className="overflow-hidden items-center pr-6 text-right whitespace-nowrap text-ellipsis'">
                     {name}
                 </p>
             </div>
