@@ -19,11 +19,11 @@ const DataPresent = ({
     return (
         <div className="flex-col flex dark:text-gray-200">
             <div className="flex border-b md:flex-row-reverse justify-between flex-col border-gray-400">
+                {toolbar && reset && <DataPresentToolbar reset={reset} />}
                 <DataPresentModeSelect
                     presentMode={presentMode}
                     setpresentMode={setpresentMode}
                 />
-                {toolbar && reset && <DataPresentToolbar reset={reset} />}
             </div>
             <div
                 dir="rtl"

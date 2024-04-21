@@ -9,7 +9,7 @@ type PhoneNavDropMenuProps = {
 const PhoneNavDropMenu = ({ onClick }: PhoneNavDropMenuProps) => {
     return (
         <motion.div
-            className="flex absolute top-0 z-10 flex-col gap-2 p-2 pt-14 w-screen bg-cgreen rounded-[0_0_1rem_1rem]"
+            className="flex absolute top-0 z-30 flex-col gap-2 p-2 pt-14 w-screen bg-cgreen rounded-[0_0_1rem_1rem]"
             onClick={onClick}
             initial={{ opacity: 0, y: -100 }}
             animate={{ opacity: 1, y: 0 }}

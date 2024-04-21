@@ -11,12 +11,12 @@ const Home = () => {
             "
         >
             <h1 className="text-3xl font-bold md:text-4xl text-cgreen">آوا</h1>
-            <h1 className="mt-8 text-2xl md:text-3xl">سرویس تبدیل صوت به متن</h1>
+            <h1 className="mt-6 md:mt-8 text-2xl md:text-3xl">سرویس تبدیل صوت به متن</h1>
             <p className="">
                 با استفاده از سرویس ما به راحتی فایل‌های صوتی خود را به متن در
                 زبان‌های انگلیسی و فارسی تبدیل کنید!
             </p>
-            <div className="flex flex-col gap-4 mt-8 md:flex-row">
+            <div className="flex flex-col gap-2 mt-6 md:mt-8 md:flex-row">
                 <div className="p-4 rounded-xl alefbaBg">
                     <h3 className="">ضبط زنده</h3>
                     <p className="">
@@ -39,7 +39,7 @@ const Home = () => {
                     </p>
                 </div>
             </div>
-            <p className="!mt-8">
+            <p className="md:mt-8 !mt-6">
                 همچنین امکان تبدیل به متن در دو زبان انگلیسی و فارسی برای شما
                 فراهم شده است.
             </p>

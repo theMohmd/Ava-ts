@@ -21,7 +21,8 @@ const App = () => {
                 h-dvh
                 font-iranYekan
                 bg-gray-100
-                ${theme ? "dark" : null}  dark:bg-neutral-900`}
+                overflow-hidden
+                ${theme ? "dark" : null} dark:bg-neutral-900`}
         >
             {/*link to source code*/}
 

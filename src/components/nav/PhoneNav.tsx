@@ -16,7 +16,7 @@ const PhoneNav = () => {
                 backgroundSize: "30%",
                 backgroundPositionY:"10%"
             }}
-                className="alefbaBg grid relative z-20 grid-cols-3 h-full text-black rounded-[0_0_1rem_1rem]"
+                className="alefbaBg grid relative z-40 grid-cols-3 h-full text-black rounded-[0_0_1rem_1rem]"
             >
                 <div></div>
                 <Logo />

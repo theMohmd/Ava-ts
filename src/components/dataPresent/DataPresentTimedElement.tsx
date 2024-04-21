@@ -3,11 +3,11 @@ const DataPresentTimedElement = ({ segment }: { segment: dataType }) => {
     return (
         <div
             className="
-              p-5
-              rounded-xl
+              p-2
+              rounded-md
               odd:bg-gray-200
               dark:odd:bg-neutral-800
-              flex gap-4
+              grid grid-cols-[6ch_6ch_1fr] gap-1
               "
         >
             <p className="font-iranSans">{segment.start}</p>
