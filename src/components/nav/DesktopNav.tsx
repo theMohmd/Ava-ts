@@ -15,19 +15,19 @@ const DesktopNav = () => {
             <div className="mb-10">
                 <Logo />
             </div>
-            <NavButton to="/Ava-ts/login">
+            <NavButton to="/login">
                 <p>ورود | ثبت‌نام</p>
                 <div className="relative size-8">
                     <LoginIcon />
                 </div>
             </NavButton>
-            <NavButton to="/Ava-ts/transcribe">
+            <NavButton to="/transcribe">
                 <p>تبدیل گفتار</p>
                 <div className="size-8">
                     <SpeechIcon />
                 </div>
             </NavButton>
-            <NavButton to="/Ava-ts/archive">
+            <NavButton to="/archive">
                 <p>آرشیو</p>
                 <div className="p-1 size-8">
                     <ArchiveIcon />

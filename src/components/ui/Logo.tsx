@@ -1,9 +1,11 @@
 //logo
+import { Link } from "react-router-dom";
 import { LogoIcon } from "./Icons";
 
 const Logo = () => {
     return (
-        <div
+        <Link
+            to="/"
             className="
             flex items-center justify-center gap-3 text-white
             "
@@ -12,7 +14,7 @@ const Logo = () => {
             <div className="size-8">
                 <LogoIcon />
             </div>
-        </div>
+        </Link>
     );
 };
 

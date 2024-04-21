@@ -11,7 +11,7 @@ const Providers = ({ children }: ProviderProps) => {
     return (
         <>
             <QueryClientProvider client={queryClient}>
-                <BrowserRouter>
+                <BrowserRouter basename="/Ava-ts">
                     <AlertProvider>
                         <ThemeProvider>
                             <LangProvider>{children}</LangProvider>

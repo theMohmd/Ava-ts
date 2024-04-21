@@ -36,10 +36,10 @@ const App = () => {
             </div>
             <div className="grid md:row-start-1">
                 <Routes>
-                    <Route path="/Ava-ts" element={<Home />} />
-                    <Route path="/Ava-ts/transcribe" element={<Transcribe />} />
-                    <Route path="/Ava-ts/archive" element={<Archive />} />
-                    <Route path="/Ava-ts/login" element={<Login />} />
+                    <Route path="/" element={<Home />} />
+                    <Route path="/transcribe" element={<Transcribe />} />
+                    <Route path="/archive" element={<Archive />} />
+                    <Route path="/login" element={<Login />} />
                 </Routes>
             </div>
         </div>
